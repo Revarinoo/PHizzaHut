@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('phone_number');
             $table->string('gender');
+            $table->string('remember_token')->nullable();
         });
     }
 
