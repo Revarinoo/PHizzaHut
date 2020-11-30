@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Pizza;
+use Illuminate\Support\Facades\Auth;
+
 class PizzaController extends Controller
 {
     /**
@@ -13,6 +16,13 @@ class PizzaController extends Controller
      */
     public function index()
     {
+        
+        if(Auth::check()){
+            $id = Auth::user()->role_id;
+        }
+        else{
+            $id = 3;
+        }
         $pizzas = Pizza::paginate(6);
         return view('pizza.index',compact('pizzas'));
     }
