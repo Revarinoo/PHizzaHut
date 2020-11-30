@@ -13,20 +13,40 @@
                     @csrf
                     <div class="form-group row">
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
-
                         <div class="col-md-6">
-                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
 
-                            @error('name')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                            @enderror
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-0">
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Register') }}
+                            </button>
                         </div>
                     </div>
                 </form>
-
-                <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
     </div>
