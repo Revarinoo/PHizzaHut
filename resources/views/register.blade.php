@@ -9,7 +9,7 @@
             </div>
             <div class="card-body">
 
-                <form method="POST" action="{{route('register')}}">
+                <form method="POST" action="{{route('???')}}">
                     @csrf
                     <div class="form-group row">
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
@@ -36,6 +36,30 @@
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
                         <div class="col-md-6">
                             <input type="password" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
+                        <div class="col-md-6 custom-radio">
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">Male </label>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">Female </label>
                         </div>
                     </div>
 
