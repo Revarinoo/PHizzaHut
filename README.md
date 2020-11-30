@@ -1,78 +1,44 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<h1>PHizza Hut</h1>
+<h5>PHizza Hut is a new pizza restaurant that is already well known in the business. 
+There are three types of user’s role in this website: Admin, Member, and Guest. Here are some features of this website :</h5>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<h3>Login</h3>
+<p> This is the page that allows user to log in to the website. If the user enters a wrong combination of email and password, then the website will show an error message.
+If user entered a correct Email and Password combination, the page would redirect user to the home page. If the customer chooses Remember Me, then the website will save the user’s cookies for 2 hours.</p>
+
+<h3>Register</h3>
+<p>The customer can register themselves an account in this page. Each will be validated as shown below. If the customer inputted an incorrect data, then the page will show an error message.</p>
+
+<h3>Home Page</h3>
+<p>This page is where the user can view all the pizza. All user can access this page. In this page, Users can also search by name of pizza and the page will be paginated to only show 6 pizzas each page. 
+In this page, guest can Login or Register to the page, this page can be accessed by all of the users. Logged in member will have extra button on the navigation bar, which is view cart and view transaction history. Meanwhile, admin will have extra button which is view all user and view all user transaction. Three buttons to add, edit and delete pizza will also appear if the logged in member is admin
 </p>
 
-## About Laravel
+<h3>View Pizza’s Detail</h3>
+<p>This page is accessible for everyone. This page shows pizza’s detail such as Pizza Name, Pizza Description, and Pizza Price based on the product clicked. If the user has already logged in as a member, there will be an Add to Cart button and a textbox to input the quantity of pizza that they want to buy. Validate the member’s input to be at least 1. Make sure that admin cannot add pizza to their cart</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h3>View Cart Page</h3>
+<p>This page is only accessible for member. This page will show all product that have been added to their cart, the web will display Pizza Image, Pizza Name, Pizza price, and quantity. An edit button and a textbox will also be displayed and if clicked, the quantity of the cart will be updated. A delete button will also be displayed and if clicked, the product will be removed. In this page, member can also Check out the cart, validate that the Checkout button will be shown only when their cart is not empty. If the member clicked on the checkout button, their cart will be cleared, and a new transaction will be added.</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h3>Transaction Detail Page</h3>
+<p>This page can be accessed by clicking on one for the transaction in transaction history page. After clicking on one of the histories, the web will show the detail of the transaction such as Pizza Image, Pizza Name, Pizza Price, Quantity and Total Price</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+<h3>Add Pizza</h3>
+<p>This page can only be accessed by an Admin. In this page admin can add a new pizza. To add a new pizza, the admin must click the Add Pizza Button in the homepage. Admin must input Pizza Name, Pizza Price, Pizza Description, and Pizza Image to add a new pizza. </p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<h3>Edit Pizza</h3>
+<p>This page can only be accessed by an Admin. In this page admin can edit an existing pizza. To edit a pizza, the admin must click the Edit Pizza Button in the homepage. Admin can change Pizza Name, Pizza Price, Pizza Description, or Pizza Image. The same validation for adding a new pizza will also be applied when editing a new pizza.</p>
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<h3>Delete Pizza</h3>
+<p>This page is only accessible for Admin. In this page, admin can delete a pizza. This page can be accessed when the admin pressed Delete Pizza Button in the homepage. After the admin pressed the delete pizza button then the pizza will be deleted.</p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
 
-## Contributing
+<h3>View All User</h3>
+<p>This page can be accessed by admin by clicking on view all user button. Then all of the user data such as User ID, Username, Email, Address, Phone Number, and Gender will be displayed.</p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h3>View All User Transaction</h3>
+<p>In this page, admin can see all the transaction that the users have made in the website. The admin can access this page by clicking on the View All User Transaction on the navigation bar. Each transaction must display transaction date, user ID, and username. If the admin clicked on one of the transactions, then the web will display the details of the transaction.</p>
