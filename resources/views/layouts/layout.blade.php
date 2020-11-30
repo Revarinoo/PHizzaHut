@@ -18,7 +18,7 @@
             <img src="images/logo.png" width="110" height="50" alt="" loading="lazy">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item right-position">
-                <a href="" class="authColor">Login |</a>
+                <a href="{{route('login')}}" class="authColor">Login |</a>
                 <a href="{{route('register')}}" class="authColor">Register</a>
             </li>
         </ul>
