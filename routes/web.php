@@ -17,11 +17,10 @@ Route::get('/', function () {
     return redirect('pizza/');
 });
 
-Route::get('/register', function (){
-   return view('register');
-})->name('register');
-
-
 Route::resource('pizza','PizzaController');
 Route::resource('cart','CartController');
 Route::resource('order','OrderController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
