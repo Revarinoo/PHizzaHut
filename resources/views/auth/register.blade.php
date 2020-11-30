@@ -93,10 +93,10 @@
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
                             <div class="col-md-6 custom-radio" >
-                                <input type="radio" name="gender" id="male" value="male"  >
-                                <label for="male">Male </label>
-                                <input type="radio" name="gender" id="female" value="female" required>
-                                <label for="female">Female </label>
+                                <input type="radio" name="gender" id="Male" value="Male"  >
+                                <label for="Male">Male </label>
+                                <input type="radio" name="gender" id="Female" value="Female" required>
+                                <label for="Female">Female </label>
 
                                 @error('gender')
                                 <span class="invalid-feedback" role="alert">
