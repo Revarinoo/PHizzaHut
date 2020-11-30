@@ -19,7 +19,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item right-position">
                 <a href="" class="authColor">Login |</a>
-                <a href="" class="authColor">Register</a>
+                <a href="{{route('register')}}" class="authColor">Register</a>
             </li>
         </ul>
     </a>

@@ -14,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('pizza/');
 });
+
+Route::get('/register', function (){
+   return view('register');
+})->name('register');
+
 
 Route::resource('pizza','PizzaController');
 Route::resource('cart','CartController');
