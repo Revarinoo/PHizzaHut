@@ -46,9 +46,7 @@ class CartController extends Controller
      */
     public function show(User $user)
     {
-        // $user = User::findOrFail($id);
         $carts = $user->cart;
-        // return $carts;
         return view('cart.cart',compact('carts'));
     }
 
@@ -72,7 +70,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
