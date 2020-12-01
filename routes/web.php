@@ -18,8 +18,11 @@ Route::get('/', function () {
 });
 
 Route::resource('pizza','PizzaController');
-Route::resource('cart','CartController');
+// Route::resource('cart','CartController');
+Route::get('/carts/{user}','CartController@show');
 Route::resource('order','OrderController');
+
+
 
 Auth::routes();
 

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Cart;
 class CartController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -43,9 +44,12 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        // $user = User::findOrFail($id);
+        $carts = $user->cart;
+        // return $carts;
+        return view('cart.cart',compact('carts'));
     }
 
     /**
