@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -80,5 +81,17 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function history(User $user)
+    {
+        $transactions = $user->order;
+        return view('transaction.history', compact('transactions'));
     }
 }

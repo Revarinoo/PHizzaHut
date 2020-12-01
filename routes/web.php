@@ -25,5 +25,7 @@ Route::post('/carts','CartController@store')->name('carts.store');
 Route::resource('order','OrderController');
 
 
+Route::get('/order/history/{user}','OrderController@history')->name('order.history');
+
 Auth::routes();
 
