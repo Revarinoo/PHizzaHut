@@ -49,4 +49,15 @@ class User extends Authenticatable
     public function cart(){
         return $this->hasMany('App\Cart');
     }
+
+    public function isAdmin(){
+        if($this->role->name == "Admin") return true;
+        return false;
+    }
+
+    public function isMember(){
+        if($this->role->name == "Member") return true;
+        return false;
+    }
+
 }

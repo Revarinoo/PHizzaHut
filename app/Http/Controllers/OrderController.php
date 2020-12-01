@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -92,6 +93,12 @@ class OrderController extends Controller
     public function history(User $user)
     {
         $transactions = $user->order;
-        return view('transaction.history', compact('transactions'));
+        if(Auth::check()){
+            $user = Auth::user();
+        }
+        else{
+            $user = "Guest";
+        }
+        return view('transaction.history', compact('transactions','user'));
     }
 }

@@ -73,7 +73,6 @@ class PizzaController extends Controller
             $user = "Guest";
         }
 
-
         return view('pizza.detail',compact('pizzas', 'user','max'));
     }
 
