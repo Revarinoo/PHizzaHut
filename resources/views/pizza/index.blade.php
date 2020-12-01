@@ -7,23 +7,21 @@
         <div class="title">
             <h1 class="text-dark mt-3">Our Delicious Pizza!</h1>
         </div>
-        @if ($user == "Guest")
-            <button class="btn btn-primary ml-3 mr-5" type="submit">Add Pizza</button>
 
-        @else
-            <form method="get">
-                <h4 class="text-dark ml-5">Search Pizza: </h4>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control ml-5" placeholder="Pizza's Name" name="pizzaname" aria-label="Pizza's Name" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary ml-3 mr-5" type="submit">Search</button>
+            @if ($user!= "Guest" && $user->role_id == 1)
+                <button class="btn btn-primary ml-3 mr-5" type="submit">Add Pizza</button>
+
+            @else
+                <form method="get">
+                    <h4 class="text-dark ml-5">Search Pizza: </h4>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control ml-5" placeholder="Pizza's Name" name="pizzaname" aria-label="Pizza's Name" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-primary ml-3 mr-5" type="submit">Search</button>
+                        </div>
                     </div>
-                </div>
-            </form>
-
-
-        @endif
-
+                </form>
+            @endif
 
         <div class="row justify-content-center">
             @if ($pizzas->count() ==0)
