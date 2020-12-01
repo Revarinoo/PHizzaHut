@@ -9,10 +9,7 @@
         </div>
         @if ($id == 1)
             <button class="btn btn-primary ml-3 mr-5" type="submit">Add Pizza</button>
-            @section('menubar')
-            <a href="" class="authColor">View All User Transaction |</a>
-            <a href="" class="authColor">View All User |</a>
-            @endsection
+
         @else
             <form method="get">
                 <h4 class="text-dark ml-5">Search Pizza: </h4>
@@ -23,12 +20,7 @@
                     </div>
                 </div>
             </form>
-            @if ($id == 2)
-                @section('menubar')
-                <a href="" class="authColor">View Transaction History |</a>
-                <a href="" class="authColor">View Cart |</a>
-                @endsection
-            @endif
+
 
         @endif
 

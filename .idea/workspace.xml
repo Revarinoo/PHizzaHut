@@ -16,13 +16,19 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_28_041036_create_carts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_28_041036_create_carts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_28_041258_create_orderdetails_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_28_041258_create_orderdetails_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +186,7 @@
       <updated>1606535868212</updated>
       <workItem from="1606535869261" duration="16493000" />
       <workItem from="1606719479036" duration="19190000" />
-      <workItem from="1606804881505" duration="9862000" />
+      <workItem from="1606804881505" duration="10900000" />
     </task>
     <servers />
   </component>
@@ -192,7 +198,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -208,6 +226,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1606551645404" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1606825944473">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1606825944472" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606814399792">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
