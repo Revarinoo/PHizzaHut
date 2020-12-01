@@ -18,22 +18,47 @@
             <img src="/images/logo.png" width="110" height="50" alt="" loading="lazy">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item right-position">
-                @if(isset($role))
-                @if($role == 3)
-                <a href="{{route('login')}}" class="authColor">Login |</a>
-                <a href="{{route('register')}}" class="authColor">Register</a>
-                @endif
-                @if($role == 1)
-                    <a href="" class="authColor">View All User Transaction |</a>
-                    <a href="" class="authColor">View All User |</a>
-                @endif
-                @if($role == 2)
-                    <a href="" class="authColor">View Transaction History |</a>
-                    <a href="" class="authColor">View Cart |</a>
-                @endif
-                @else
+                @if(isset($user))
+                    @if($user == "Guest")
                     <a href="{{route('login')}}" class="authColor">Login |</a>
                     <a href="{{route('register')}}" class="authColor">Register</a>
+                    @else
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ $user->username }}
+                            </a>
+    
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+    
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    @if($user->role_id == 1)
+                        <a href="" class="authColor">View All User Transaction |</a>
+                        <a href="" class="authColor">View All User |</a>
+                    @elseif($user->role_id == 2)
+                        <a href="" class="authColor">View Transaction History |</a>
+                    <a href="/carts/{{$user->id}}" class="authColor">View Cart |</a>
+                    @endif
+
+                    @endif
+
+                    
+                    
+                @else
+                <a href="{{route('login')}}" class="authColor">Login |</a>
+                <a href="{{route('register')}}" class="authColor">Register</a>  
                 @endif
             </li>
         </ul>
