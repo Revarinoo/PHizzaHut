@@ -18,16 +18,16 @@ class PizzaController extends Controller
     {
 
         if(Auth::check()){
-            $role = Auth::user()->role_id;
+            $user = Auth::user();
         }
         else{
-            $role = 3;
+            $user = "Guest";
         }
 
         $search = $request->get('pizzaname');
         $pizzas = Pizza::where('name','like','%'.$search.'%')->paginate(6);
         // $pizzas = Pizza::paginate(6);
-        return view('pizza.index',compact('pizzas','role'));
+        return view('pizza.index',compact('pizzas','user'));
     }
 
     /**
@@ -61,13 +61,13 @@ class PizzaController extends Controller
     {
         $pizzas = Pizza::findOrFail($id);
         if(Auth::check()){
-            $role = Auth::user()->role_id;
+            $user = Auth::user();
         }
-        else {
-            $role = 3;
+        else{
+            $user = "Guest";
         }
 
-        return view('pizza.detail',compact('pizzas', 'role'));
+        return view('pizza.detail',compact('pizzas', 'user'));
     }
 
     /**

@@ -55,7 +55,13 @@ class CartController extends Controller
     public function show(User $user)
     {
         $carts = $user->cart;
-        return view('cart.cart',compact('carts'));
+        if(Auth::check()){
+            $user = Auth::user();
+        }
+        else{
+            $user = "Guest";
+        }
+        return view('cart.cart',compact('carts','user'));
     }
 
     /**
