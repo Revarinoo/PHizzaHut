@@ -2,10 +2,8 @@
 
 @section('content')
     <div class="container">
-<<<<<<< HEAD
-        <a class="row justify-content-center">
-=======
         
+
         <div class="title">
             <h1 class="text-dark mt-3">Our Delicious Pizza!</h1>
         </div>
@@ -31,15 +29,15 @@
                 <a href="" class="authColor">View Cart |</a>
                 @endsection
             @endif
-         
+
         @endif
-        
+
 
         <div class="row justify-content-center">
             @if ($pizzas->count() ==0)
                 <h5>Pizza Not Found</h5>
             @endif
->>>>>>> ff3c8440fa66a09029768eda4fb2e594dd315513
+
             @foreach ($pizzas as $pizza)
            <form action="{{route('pizza.show',$pizza->id)}}" method="POST">
             <a class="card d-inline-block ml-2 mt-2 mb-3 mr-2" style="width:20rem;" href="{{route('pizza.show',$pizza->id)}}">
@@ -53,7 +51,8 @@
             </a>
             @endforeach
            </form>
-        </a>
+        </div>
+
         {{$pizzas->links()}}
     </div>
 
