@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
+use App\User;
 class CartController extends Controller
 {
     /**
@@ -16,7 +17,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -51,9 +52,12 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        // $user = User::findOrFail($id);
+        $carts = $user->cart;
+        // return $carts;
+        return view('cart.cart',compact('carts'));
     }
 
     /**

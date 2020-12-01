@@ -16,7 +16,7 @@ class Cart extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function Pizza(){
-        return $this->hasMany('App\Pizza');
+    public function pizza(){
+        return $this->belongsTo('App\Pizza');
     }
 }
