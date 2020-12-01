@@ -63,6 +63,9 @@ class PizzaController extends Controller
         if(Auth::check()){
             $role = Auth::user()->role->name;
         }
+        else {
+            $role = "Guest";
+        }
 
         return view('pizza.detail',compact('pizzas', 'role'));
     }

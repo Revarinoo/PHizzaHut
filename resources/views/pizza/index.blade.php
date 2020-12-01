@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        
+
 
         <div class="title">
             <h1 class="text-dark mt-3">Our Delicious Pizza!</h1>

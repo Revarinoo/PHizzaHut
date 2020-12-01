@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\User;
 use App\Cart;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+
+use App\User;
 class CartController extends Controller
 {
     /**
@@ -35,7 +38,12 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        return "hi";
+        $input = $request->all();
+        $user = Auth::user();
+        $input['user_id'] = Auth::user()->id;
+        $user->cart()->create($input);
+
+        return Redirect::back()->with('msg','Success!');
     }
 
     /**

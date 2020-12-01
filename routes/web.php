@@ -21,8 +21,8 @@ Route::resource('pizza','PizzaController');
 // Route::resource('cart','CartController');
 Route::get('/carts/{user}','CartController@show');
 Route::put('/carts/{cart}/{pizza}','CartController@update');
+Route::post('/carts','CartController@store')->name('carts.store');
 Route::resource('order','OrderController');
-
 
 
 Auth::routes();
