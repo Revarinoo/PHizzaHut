@@ -27,7 +27,7 @@ class PizzaController extends Controller
         $search = $request->get('pizzaname');
         $pizzas = Pizza::where('name','like','%'.$search.'%')->paginate(6);
         // $pizzas = Pizza::paginate(6);
-        return view('pizza.index',compact('pizzas'));
+        return view('pizza.index',compact('pizzas','id'));
     }
 
     /**
