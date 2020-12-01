@@ -23,7 +23,7 @@ class CartController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,7 +34,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "hi";
     }
 
     /**

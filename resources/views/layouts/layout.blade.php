@@ -14,8 +14,8 @@
 <body>
 
 <nav class="navbar navbar-light bg-custom">
-    <a class="navbar-brand container" href="#">
-            <img src="images/logo.png" width="110" height="50" alt="" loading="lazy">
+    <a class="navbar-brand container" href="{{route('pizza.index')}}">
+            <img src="/images/logo.png" width="110" height="50" alt="" loading="lazy">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item right-position">
                 <a href="{{route('login')}}" class="authColor">Login |</a>

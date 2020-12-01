@@ -16,7 +16,7 @@ class PizzaController extends Controller
      */
     public function index()
     {
-        
+
         if(Auth::check()){
             $id = Auth::user()->role_id;
         }
@@ -56,7 +56,12 @@ class PizzaController extends Controller
      */
     public function show($id)
     {
-        //
+        $pizzas = Pizza::findOrFail($id);
+        if(Auth::check()){
+            $role = Auth::user()->role->name;
+        }
+
+        return view('pizza.detail',compact('pizzas', 'role'));
     }
 
     /**

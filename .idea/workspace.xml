@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +181,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606535868212</updated>
       <workItem from="1606535869261" duration="16493000" />
-      <workItem from="1606719479036" duration="14228000" />
+      <workItem from="1606719479036" duration="19190000" />
     </task>
     <servers />
   </component>
@@ -206,9 +208,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1606551645404" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606733190010">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606752313124">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606733190010" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606752313124" />
   </component>
 </project>
