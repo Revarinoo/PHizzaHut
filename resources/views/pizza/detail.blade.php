@@ -18,14 +18,18 @@
                             @csrf
                             <label for="quantity">Quantity : </label>
                             <input type="number" min="1" max="{{$pizzas->stock}}" name="quantity" class="qty-form">
-
+                            <input type="hidden" name="pizza_id" value="{{$pizzas->id}}">
                             <div class="form-group row mb-0 custom-button-detail">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit"class="btn btn-primary">
                                         {{ __('Add to Cart') }}
                                     </button>
                             </div>
-
                         </form>
+                            @if(session('msg'))
+                                <div class="alert alert-success" role="alert" style="margin: 20px">
+                                    {{ session('msg') }}
+                                </div>
+                            @endif
                         @endif
                     </div>
                 </div>
