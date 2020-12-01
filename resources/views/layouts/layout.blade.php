@@ -28,14 +28,14 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ $user->username }}
                             </a>
-    
+
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-    
+
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
@@ -48,17 +48,17 @@
                         <a href="" class="authColor">View All User Transaction |</a>
                         <a href="" class="authColor">View All User |</a>
                     @elseif($user->role_id == 2)
-                        <a href="" class="authColor">View Transaction History |</a>
+                        <a href="{{route('order.history',$user->id)}}" class="authColor">View Transaction History |</a>
                     <a href="/carts/{{$user->id}}" class="authColor">View Cart |</a>
                     @endif
 
                     @endif
 
-                    
-                    
+
+
                 @else
                 <a href="{{route('login')}}" class="authColor">Login |</a>
-                <a href="{{route('register')}}" class="authColor">Register</a>  
+                <a href="{{route('register')}}" class="authColor">Register</a>
                 @endif
             </li>
         </ul>
