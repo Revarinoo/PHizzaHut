@@ -17,7 +17,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -84,7 +84,10 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $input = $request->all();
+        Auth::user()->cart()->whereId($id)->first()->update($input);
+
+        return Redirect::back();
     }
 
     /**
@@ -96,6 +99,6 @@ class CartController extends Controller
     public function destroy($id)
     {
         Cart::destroy($id);
-        return redirect()->back();
+        return Redirect::back();
     }
 }

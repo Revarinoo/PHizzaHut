@@ -18,14 +18,13 @@ Route::get('/', function () {
 });
 
 Route::resource('pizza','PizzaController');
-// Route::resource('cart','CartController');
 Route::get('/carts/{user}','CartController@show');
-Route::put('/carts/{cart}/{pizza}','CartController@update');
+Route::put('/carts/{cart}','CartController@update')->name('carts.update');
 Route::post('/carts','CartController@store')->name('carts.store');
 Route::resource('order','OrderController');
 
 Route::get('/order/history/{user}','OrderController@history')->name('order.history');
 
-Route::delete('/carts/{cart}','CartController@destroy');
+Route::delete('/carts/{cart}','CartController@destroy')->name('carts.destroy');
 Auth::routes();
 
