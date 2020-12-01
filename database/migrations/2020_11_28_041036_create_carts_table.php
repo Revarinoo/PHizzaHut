@@ -14,6 +14,7 @@ class CreateCartsTable extends Migration
     public function up()
     {
         Schema::create('carts', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('user_id');
             $table->foreignId('pizza_id');
             $table->integer('quantity');

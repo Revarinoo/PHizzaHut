@@ -14,6 +14,7 @@ class CreateOrderdetailsTable extends Migration
     public function up()
     {
         Schema::create('orderdetails', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('order_id');
             $table->foreignId('pizza_id');
             $table->integer('quantity');
