@@ -18,16 +18,16 @@
             <img src="/images/logo.png" width="110" height="50" alt="" loading="lazy">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item right-position">
-                @if(isset($id))
-                @if($id == 3)
+                @if(isset($role))
+                @if($role == 3)
                 <a href="{{route('login')}}" class="authColor">Login |</a>
                 <a href="{{route('register')}}" class="authColor">Register</a>
                 @endif
-                @if($id == 1)
+                @if($role == 1)
                     <a href="" class="authColor">View All User Transaction |</a>
                     <a href="" class="authColor">View All User |</a>
                 @endif
-                @if($id == 2)
+                @if($role == 2)
                     <a href="" class="authColor">View Transaction History |</a>
                     <a href="" class="authColor">View Cart |</a>
                 @endif

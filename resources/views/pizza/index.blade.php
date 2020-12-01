@@ -7,7 +7,7 @@
         <div class="title">
             <h1 class="text-dark mt-3">Our Delicious Pizza!</h1>
         </div>
-        @if ($id == 1)
+        @if ($role == 1)
             <button class="btn btn-primary ml-3 mr-5" type="submit">Add Pizza</button>
 
         @else
