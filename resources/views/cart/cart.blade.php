@@ -14,7 +14,7 @@
                     <h5 class="card-title custom-name">{{$cart->pizza->name}}</h5>
                     <p class="card-text">Rp{{$cart->pizza->price}}</p>
                     
-                <form action="" method="POST">
+                <form action="/carts/{{$cart->id}}" method="POST">
                         @csrf
                         @method('PUT')
                         <p class="card-text">Quantity: </p>
