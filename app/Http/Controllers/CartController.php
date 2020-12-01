@@ -39,9 +39,17 @@ class CartController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        $user = Auth::user();
-        $input['user_id'] = Auth::user()->id;
-        $user->cart()->create($input);
+        $cart = Cart::where('pizza_id',$request->pizza_id)->first();
+
+        if($cart != null){
+            $cart->quantity += $request->quantity;
+            $cart->save();
+        }
+        else{
+            $user = Auth::user();
+            $input['user_id'] = Auth::user()->id;
+            $user->cart()->create($input);
+        }
 
         return Redirect::back()->with('msg','Success!');
     }

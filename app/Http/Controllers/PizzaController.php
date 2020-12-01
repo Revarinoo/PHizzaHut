@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
 use App\User;
 use Illuminate\Http\Request;
 use App\Pizza;
@@ -60,6 +61,11 @@ class PizzaController extends Controller
     public function show($id)
     {
         $pizzas = Pizza::findOrFail($id);
+        $cart = Cart::where('pizza_id',$id)->first();
+        if($cart != null){
+            $max = $pizzas->stock - $cart->quantity;
+        }
+
         if(Auth::check()){
             $user = Auth::user();
         }
@@ -67,7 +73,8 @@ class PizzaController extends Controller
             $user = "Guest";
         }
 
-        return view('pizza.detail',compact('pizzas', 'user'));
+
+        return view('pizza.detail',compact('pizzas', 'user','max'));
     }
 
     /**
