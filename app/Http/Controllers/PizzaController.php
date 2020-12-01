@@ -14,7 +14,7 @@ class PizzaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
         if(Auth::check()){
@@ -23,8 +23,11 @@ class PizzaController extends Controller
         else{
             $id = 3;
         }
-        $pizzas = Pizza::paginate(6);
-        return view('pizza.index',compact('pizzas'));
+
+        $search = $request->get('pizzaname');
+        $pizzas = Pizza::where('name','like','%'.$search.'%')->paginate(6);
+        // $pizzas = Pizza::paginate(6);
+        return view('pizza.index',compact('pizzas','id'));
     }
 
     /**

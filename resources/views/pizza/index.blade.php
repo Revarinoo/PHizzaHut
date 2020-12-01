@@ -1,11 +1,45 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div class="pl-5">
-        <h1>Our Pizza</h1>
-    </div>
     <div class="container">
+<<<<<<< HEAD
         <a class="row justify-content-center">
+=======
+        
+        <div class="title">
+            <h1 class="text-dark mt-3">Our Delicious Pizza!</h1>
+        </div>
+        @if ($id == 1)
+            <button class="btn btn-primary ml-3 mr-5" type="submit">Add Pizza</button>
+            @section('menubar')
+            <a href="" class="authColor">View All User Transaction |</a>
+            <a href="" class="authColor">View All User |</a>
+            @endsection
+        @else
+            <form method="get">
+                <h4 class="text-dark ml-5">Search Pizza: </h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control ml-5" placeholder="Pizza's Name" name="pizzaname" aria-label="Pizza's Name" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary ml-3 mr-5" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+            @if ($id == 2)
+                @section('menubar')
+                <a href="" class="authColor">View Transaction History |</a>
+                <a href="" class="authColor">View Cart |</a>
+                @endsection
+            @endif
+         
+        @endif
+        
+
+        <div class="row justify-content-center">
+            @if ($pizzas->count() ==0)
+                <h5>Pizza Not Found</h5>
+            @endif
+>>>>>>> ff3c8440fa66a09029768eda4fb2e594dd315513
             @foreach ($pizzas as $pizza)
            <form action="{{route('pizza.show',$pizza->id)}}" method="POST">
             <a class="card d-inline-block ml-2 mt-2 mb-3 mr-2" style="width:20rem;" href="{{route('pizza.show',$pizza->id)}}">
