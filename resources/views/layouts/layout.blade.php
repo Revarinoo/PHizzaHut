@@ -53,7 +53,7 @@
                     @endif
 
                     @endif
-                    
+
                 @else
                 <a href="{{route('login')}}" class="authColor">Login |</a>
                 <a href="{{route('register')}}" class="authColor">Register</a>
