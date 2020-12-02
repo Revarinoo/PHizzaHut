@@ -17,7 +17,9 @@ Route::get('/', function () {
     return redirect('pizza/');
 });
 
-Route::group(['middleware'=>'admin'],function (){});
+Route::group(['middleware'=>'admin'],function (){
+    Route::get('/users','UserController@index')->name('users.index');
+});
 
 //validasi biar gabisa asal tembak link
 Route::group(['middleware'=>'member'],function (){
@@ -30,7 +32,7 @@ Route::group(['middleware'=>'member'],function (){
     Route::get('/orderdetails/{order}','OrderController@show');
 });
 
-Route::get('/users','UserController@index');
+
 
 Route::resource('pizza','PizzaController');
 
