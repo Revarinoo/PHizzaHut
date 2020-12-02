@@ -61,11 +61,6 @@ class PizzaController extends Controller
     public function show($id)
     {
         $pizzas = Pizza::findOrFail($id);
-        $cart = Cart::where('pizza_id',$id)->first();
-        $max = null;
-        if($cart != null){
-            $max = $pizzas->stock - $cart->quantity;
-        }
 
         if(Auth::check()){
             $user = Auth::user();
@@ -74,7 +69,7 @@ class PizzaController extends Controller
             $user = "Guest";
         }
 
-        return view('pizza.detail',compact('pizzas', 'user','max'));
+        return view('pizza.detail',compact('pizzas', 'user'));
     }
 
     /**

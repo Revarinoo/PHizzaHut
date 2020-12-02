@@ -18,7 +18,7 @@
                         @csrf
                         @method('PUT')
                         <p class="card-text">Quantity: </p>
-                        <input type="number" min="1" max="{{$cart->pizza->stock}}" name="quantity" class="qty-form" value="{{$cart->quantity}}">
+                        <input type="number" min="1" name="quantity" class="qty-form" value="{{$cart->quantity}}">
                         <button type="submit" class="btn btn-primary">Update Quantity</button>
                     </form>
                     <form action="{{route('carts.destroy',$cart->id)}}" method="POST">

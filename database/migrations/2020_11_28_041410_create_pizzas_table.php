@@ -17,7 +17,6 @@ class CreatePizzasTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('price');
-            $table->integer('stock');
             $table->text('description');
             $table->string('image');
         });
