@@ -17,7 +17,7 @@
                         <form action="{{route('carts.store')}}" style="margin-top: 40px;" method="POST">
                             @csrf
                             <label for="quantity">Quantity : </label>
-                            <input type="number" min="1" max="{{$max}}" name="quantity" class="qty-form">
+                            <input type="number" min="1" max="{{isset($max)? $max : $pizzas->stock}}" name="quantity" class="qty-form">
                             <input type="hidden" name="pizza_id" value="{{$pizzas->id}}">
                             <div class="form-group row mb-0 custom-button-detail">
                                     <button type="submit"class="btn btn-primary">

@@ -62,6 +62,7 @@ class PizzaController extends Controller
     {
         $pizzas = Pizza::findOrFail($id);
         $cart = Cart::where('pizza_id',$id)->first();
+        $max = null;
         if($cart != null){
             $max = $pizzas->stock - $cart->quantity;
         }
