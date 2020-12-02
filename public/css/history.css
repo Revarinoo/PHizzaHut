@@ -1,3 +1,12 @@
 .bg-red {
     background: #DF3821;
 }
+
+.custom-card {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+a:hover {
+    text-decoration: none;
+}
