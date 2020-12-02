@@ -30,6 +30,8 @@ Route::group(['middleware'=>'member'],function (){
     Route::get('/orderdetails/{order}','OrderController@show');
 });
 
+Route::get('/users','UserController@index');
+
 Route::resource('pizza','PizzaController');
 
 Auth::routes();
