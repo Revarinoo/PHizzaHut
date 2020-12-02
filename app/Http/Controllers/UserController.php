@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -15,8 +16,15 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('user.user',compact('users'));
+        if(Auth::check()){
+            $user = Auth::user();
+        }
+        else{
+            $user = "Guest";
+        }
+
+        $listusers = User::all();
+        return view('user.user',compact('listusers','user'));
     }
 
     /**
