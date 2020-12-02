@@ -27,6 +27,7 @@ Route::group(['middleware'=>'member'],function (){
     Route::post('/carts','CartController@store')->name('carts.store');
     Route::resource('order','OrderController');
     Route::delete('/carts/{cart}','CartController@destroy')->name('carts.destroy');
+    Route::get('/orderdetails/{order}','OrderController@show');
 });
 
 Route::resource('pizza','PizzaController');
