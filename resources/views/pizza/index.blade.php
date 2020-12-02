@@ -1,12 +1,10 @@
 @extends('layouts.layout')
 @section('content')
+    <link rel="stylesheet" href="{{asset('css/index.pizza.css')}}">
     <div class="container">
-
-
         <div class="title">
             <h1 class="text-dark mt-3">Our Delicious Pizza!</h1>
         </div>
-
             @if ($user!= "Guest" && $user->role_id == 1)
                 <button class="btn btn-primary ml-3 mr-5" type="submit">Add Pizza</button>
 
@@ -29,7 +27,7 @@
 
             @foreach ($pizzas as $pizza)
            <form action="{{route('pizza.show',$pizza->id)}}" method="POST">
-            <a class="card d-inline-block ml-2 mt-2 mb-3 mr-2" style="width:20rem;" href="{{route('pizza.show',$pizza->id)}}">
+            <a class="card d-inline-block ml-2 mt-2 mb-3 mr-2 custom-pizza" href="{{route('pizza.show',$pizza->id)}}">
                 <div class="imgwrap">
                     <img class="card-img-top" src="/images/{{$pizza->image}}" alt="Card image cap">
                 </div>

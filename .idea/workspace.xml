@@ -27,8 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/history.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/history.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/transaction/history.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaction/history.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +188,7 @@
       <workItem from="1606535869261" duration="16493000" />
       <workItem from="1606719479036" duration="19190000" />
       <workItem from="1606804881505" duration="24504000" />
-      <workItem from="1606912365524" duration="1670000" />
+      <workItem from="1606912365524" duration="3046000" />
     </task>
     <servers />
   </component>
@@ -239,9 +240,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1606825944472" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606814399792">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606915524630">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606814399792" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606915524630" />
   </component>
 </project>
