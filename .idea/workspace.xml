@@ -27,28 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Pizza.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pizza.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pizzaLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pz9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cart/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pizza/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/transaction/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaction/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +191,7 @@
       <workItem from="1606912365524" duration="7155000" />
       <workItem from="1606983660398" duration="98000" />
       <workItem from="1606987610802" duration="24000" />
-      <workItem from="1607002296710" duration="6356000" />
+      <workItem from="1607002296710" duration="9789000" />
     </task>
     <servers />
   </component>
@@ -262,9 +243,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1606825944472" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606924962764">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1607014217555">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1606924962764" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607014217555" />
   </component>
 </project>

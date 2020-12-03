@@ -35,8 +35,10 @@
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->price}}</h5>
                 </div>
+                
+{{--                <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>--}}
             </a>
-            @endforeach
+               @endforeach
            </form>
         </div>
 

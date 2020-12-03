@@ -16,6 +16,8 @@ class PizzaController extends Controller
 
     public function __construct(){
         $this->middleware('admin')->only('create');
+        $this->middleware('admin')->only('store');
+        $this->middleware('admin')->only('destroy');
     }
 
     /**
@@ -112,15 +114,41 @@ class PizzaController extends Controller
         //
     }
 
+
     /**
-     * Remove the specified resource from storage.
+     * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function delete($id)
+    {
+        $pizzas = Pizza::findOrFail($id);
+
+        if(Auth::check()){
+            $user = Auth::user();
+        }
+        else{
+            $user = "Guest";
+        }
+
+        return view('pizza.delete',compact('pizzas', 'user'));
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     */
     public function destroy($id)
     {
-        //
+        $pizza = Pizza::findOrFail($id);
+        if($pizza->image != null) Storage::delete('public/images/'. $pizza->image);
+        $pizza->delete();
+
+
+        return redirect('/pizza');
     }
 
 }

@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::group(['middleware'=>'admin'],function (){
     Route::get('/users','UserController@index')->name('users.index');
+    Route::get('delete/{pizza}','PizzaController@delete')->name('pizza.delete');
 });
 
 //validasi biar gabisa asal tembak link
