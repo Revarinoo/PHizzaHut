@@ -6,7 +6,7 @@
             <h1 class="text-dark mt-3">Our Delicious Pizza!</h1>
         </div>
             @if ($user!= "Guest" && $user->role_id == 1)
-                <button class="btn btn-primary ml-3 mr-5" type="submit">Add Pizza</button>
+                <button class="btn btn-primary ml-3 mr-5" type="submit" onclick="location.href='{{route('pizza.create')}}'">Add Pizza</button>
 
             @else
                 <form method="get">
@@ -29,7 +29,7 @@
            <form action="{{route('pizza.show',$pizza->id)}}" method="POST">
             <a class="card d-inline-block ml-2 mt-2 mb-3 mr-2 custom-pizza" href="{{route('pizza.show',$pizza->id)}}">
                 <div class="imgwrap">
-                    <img class="card-img-top" src="/images/{{$pizza->image}}" alt="Card image cap">
+                    <img class="card-img-top" src="{{url('storage/images/'.$pizza->image)}}" alt="Card image cap">
                 </div>
                 <div class="card-body">
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>

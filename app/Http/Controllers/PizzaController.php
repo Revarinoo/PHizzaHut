@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Http\Requests\PizzaAddRequest;
 use App\User;
 use Illuminate\Http\Request;
 use App\Pizza;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class PizzaController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('admin')->only('create');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +46,7 @@ class PizzaController extends Controller
      */
     public function create()
     {
-        //
+        return view('pizza.add');
     }
 
     /**
@@ -47,9 +55,18 @@ class PizzaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PizzaAddRequest $request)
     {
-        //
+        $input = $request->all();
+
+        $file = $request->file('image');
+        $imgname = time() . $file->getClientOriginalName();
+        Storage::putFileAs('public/images',$file,$imgname);
+
+        $input['image'] = $imgname;
+        Pizza::create($input);
+
+        return Redirect::back()->with('msg','Success!');
     }
 
     /**
@@ -105,4 +122,5 @@ class PizzaController extends Controller
     {
         //
     }
+
 }

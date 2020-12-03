@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PHizza Hut</title>
-    <link rel="icon" href="/images/pizzaLogo.png" type="image/x-icon">
+    <link rel="icon" href="/storage/images/pizzaLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="{{asset('css/layout.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 
@@ -15,7 +15,7 @@
 
 <nav class="navbar navbar-light bg-custom">
     <a class="navbar-brand container" href="{{route('pizza.index')}}">
-            <img src="/images/logo.png" width="110" height="50" alt="" loading="lazy">
+            <img src="/storage/images/logo.png" width="110" height="50" alt="" loading="lazy">
     </a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item right-position">
