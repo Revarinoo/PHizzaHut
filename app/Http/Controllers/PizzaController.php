@@ -67,7 +67,6 @@ class PizzaController extends Controller
 
         $input['image'] = $imgname;
         Pizza::create($input);
-
         return Redirect::back()->with('msg','Success!');
     }
 
@@ -97,9 +96,9 @@ class PizzaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pizza $pizza)
     {
-        //
+        return view('pizza.edit',compact('pizza'));
     }
 
     /**
@@ -109,9 +108,17 @@ class PizzaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pizza $pizza)
     {
-        //
+        $pizza->name = $request->name;
+        $pizza->price = $request->price;
+        $pizza->description = $request->description;
+        $file = $request->file('image');
+        $imgname = time() . $file->getClientOriginalName();
+        Storage::putFileAs('public/images',$file,$imgname);
+        $pizza->image = $imgname;
+        $pizza->save();
+        return $pizza;
     }
 
 
