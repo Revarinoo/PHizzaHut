@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
 
 <div class="container">
@@ -7,7 +5,7 @@
     <div class="card mb-3 custom-card-detail">
         <div class="row no-gutters">
             <div class="col-md-4">
-            <img src="/images/<?php echo e($details->pizza->image); ?>" class="card-img img-detail" alt="Pizza Image" style="width:15rem; height:15rem;">
+            <img src="<?php echo e(url('storage/images/'.$details->pizza->image)); ?>" class="card-img img-detail" alt="Pizza Image" style="width:15rem; height:15rem;">
             </div>
             <div class="col-md-8">
                 <div class="card-body pizza-detail">

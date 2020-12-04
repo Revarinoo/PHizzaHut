@@ -34,7 +34,8 @@
                 <h5 class="card-title text-center font-weight-bold"><?php echo e($pizza->name); ?></h5>
                 <h5 class="card-title text-center font-weight-bold"><?php echo e($pizza->price); ?></h5>
                 </div>
-                <a href="<?php echo e(route('pizza.delete',$pizza->id)); ?>" class="btn btn-danger">Delete</a>
+                
+
             </a>
                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
            </form>
