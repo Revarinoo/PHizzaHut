@@ -118,7 +118,7 @@ class PizzaController extends Controller
         Storage::putFileAs('public/images',$file,$imgname);
         $pizza->image = $imgname;
         $pizza->save();
-        return $pizza;
+        return Redirect::back()->with('msg','Update Success');
     }
 
 

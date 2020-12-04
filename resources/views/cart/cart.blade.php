@@ -31,6 +31,9 @@
         </div>
     </div>
     @endforeach
-
+<form action="/carts/{{$user->id}}/checkout" method="POST">
+        @csrf
+        <button type="submit" class="btn btn-primary">Checkout</button>
+    </form>
 </div
 @endsection

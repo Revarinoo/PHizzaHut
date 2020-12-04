@@ -10,7 +10,7 @@
                 <img src="{{url('storage/images/'.$pizza->image)}}" class="card-img img-detail" alt="Pizza Image">
             </div>
             <div class="card-body">
-                <form action="/update/{{$pizza->id}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('pizza.update',$pizza->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group row">
