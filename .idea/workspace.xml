@@ -29,11 +29,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/Nhzwq8lTJUSpFII3etHALhzY2YdQEf6Zgxbmn99K" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/O5TFAvHGNo88LDZpbqO84ZRonTTqqilMZEdty1Rh" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/O5TFAvHGNo88LDZpbqO84ZRonTTqqilMZEdty1Rh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/WgdykV25FDS0oqlPRhsYp2nsZUuBPiNsTGP6ZvQN" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607089223a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607089335a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607089747a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607089893BuktiKelompok_OOAD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607089988a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607090640a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607090695a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607090766a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/1607090810a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/images/16070908761.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +201,7 @@
       <workItem from="1606983660398" duration="98000" />
       <workItem from="1606987610802" duration="24000" />
       <workItem from="1607002296710" duration="9859000" />
-      <workItem from="1607085188607" duration="11007000" />
+      <workItem from="1607085188607" duration="11361000" />
     </task>
     <servers />
   </component>
