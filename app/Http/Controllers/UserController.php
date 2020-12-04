@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -51,12 +52,19 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function transaction()
     {
-        //
+        $listorders = Order::all();
+        if(Auth::check()){
+            $user = Auth::user();
+        }
+        else{
+            $user = "Guest";
+        }
+        return view('transaction.allUser',compact('listorders','user'));
     }
 
     /**
