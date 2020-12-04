@@ -19,9 +19,7 @@ Route::get('/', function () {
 
 Route::group(['middleware'=>'admin'],function (){
     Route::get('/users','UserController@index')->name('users.index');
-    Route::get('delete/{pizza}','PizzaController@delete')->name('pizza.delete');
-    Route::get('update/{pizza}','PizzaController@edit')->name('pizza.edit');
-    Route::put('update/{pizza}','PizzaController@update');
+    Route::get('pizza/{pizza}/delete','PizzaController@delete')->name('pizza.delete');
 });
 
 //validasi biar gabisa asal tembak link
@@ -35,6 +33,7 @@ Route::group(['middleware'=>'member'],function (){
     Route::get('/orderdetails/{order}','OrderController@show');
 });
 
+Route::post('/carts/{user}/checkout','CartController@checkout');
 
 
 Route::resource('pizza','PizzaController');

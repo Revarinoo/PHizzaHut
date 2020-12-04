@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Order;
+use App\Orderdetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -71,7 +73,21 @@ class CartController extends Controller
         }
         return view('cart.cart',compact('carts','user'));
     }
+    public function checkout(User $user){
+        $carts = $user->cart;
+        $order = new Order;
+        $order->user_id = $carts->first()->user_id;
+        $order->save();
+        foreach ($carts as $cart) {
+            $detail = New Orderdetail;
+            $detail->order_id = $order->id;
+            $detail->pizza_id = $cart->pizza_id;
+            $detail->quantity = $cart->quantity;
+            $this->destroy($cart->id);
+            $detail->save();
+        }
 
+    }
     /**
      * Show the form for editing the specified resource.
      *

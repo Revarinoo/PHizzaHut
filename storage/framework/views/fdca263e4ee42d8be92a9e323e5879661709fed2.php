@@ -10,7 +10,7 @@
                 <img src="<?php echo e(url('storage/images/'.$pizza->image)); ?>" class="card-img img-detail" alt="Pizza Image">
             </div>
             <div class="card-body">
-                <form action="/update/<?php echo e($pizza->id); ?>" method="POST" enctype="multipart/form-data">
+                <form action="<?php echo e(route('pizza.update',$pizza->id)); ?>" method="POST" enctype="multipart/form-data">
                     <?php echo csrf_field(); ?>
                     <?php echo method_field('PUT'); ?>
                     <div class="form-group row">

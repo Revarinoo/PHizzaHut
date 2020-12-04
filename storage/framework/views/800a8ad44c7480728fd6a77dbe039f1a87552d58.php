@@ -31,7 +31,10 @@
         </div>
     </div>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
+<form action="/carts/<?php echo e($user->id); ?>/checkout" method="POST">
+        <?php echo csrf_field(); ?>
+        <button type="submit" class="btn btn-primary">Checkout</button>
+    </form>
 </div
 <?php $__env->stopSection(); ?>
 
