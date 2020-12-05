@@ -31,7 +31,8 @@
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/gPrPjPXeJuKl3HZUSrPX93KoRQtua5pUs7awu5Ll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +196,8 @@
       <workItem from="1606987610802" duration="24000" />
       <workItem from="1607002296710" duration="9859000" />
       <workItem from="1607085188607" duration="18097000" />
-      <workItem from="1607154950919" duration="681000" />
+      <workItem from="1607154950919" duration="1284000" />
+      <workItem from="1607181504539" duration="599000" />
     </task>
     <servers />
   </component>
