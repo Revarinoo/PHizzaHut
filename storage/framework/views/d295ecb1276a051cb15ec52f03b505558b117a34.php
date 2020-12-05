@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
     <?php $__currentLoopData = $listusers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $listuser): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <div class="card mb-3 d-inline-block  ml-3 mr-3 mt-5" style="width: 18rem;">
+        <div class="card mb-3 d-inline-block ml-3 mr-3 mt-5" style="width: 18rem;">
             <div class="card-header" style="background-color: #DF3821">User ID : <?php echo e($listuser->id); ?></div>
                 <div class="card-body">
                     <p class="card-text">Username: <?php echo e($listuser->username); ?></p>
