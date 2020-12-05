@@ -13,57 +13,78 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-custom">
-    <a class="navbar-brand container" href="<?php echo e(route('pizza.index')); ?>">
-            <img src="/storage/images/logo.png" width="110" height="50" alt="" loading="lazy">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-custom">
+    <a class="navbar-brand left-position" href="<?php echo e(route('pizza.index')); ?>">
+        <img src="<?php echo e(url('storage/images/logo.png')); ?>" width="110" height="50" alt="" >
     </a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item right-position">
-                <?php if(isset($user)): ?>
-                    <?php if($user == "Guest"): ?>
-                    <a href="<?php echo e(route('login')); ?>" class="authColor">Login |</a>
-                    <a href="<?php echo e(route('register')); ?>" class="authColor">Register</a>
-                    <?php else: ?>
-                    <ul class="navbar-nav ml-auto">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto right-position">
+            <?php if(isset($user)): ?>
+                <?php if($user == "Guest"): ?>
+                    <li class="nav-item active">
+                        <a href="<?php echo e(route('login')); ?>" class="nav-link" id="text-color">Login</a>
+                    </li>
+                    <li class="nav-link" id="divider">|</li>
+                    <li class="nav-item active">
+                        <a href="<?php echo e(route('register')); ?>" class="nav-link" id="text-color">Register</a>
+                    </li>
+                <?php else: ?>
+
+                    <?php if($user->role_id == 1): ?>
+                        <li class="nav-item active">
+                            <a href="<?php echo e(route('users.transaction')); ?>" class="nav-link" id="text-color">View All User Transaction</a>
+                        </li>
+                        <li class="nav-link" id="divider">|</li>
+                        <li class="nav-item active">
+                            <a href="<?php echo e(route('users.index')); ?>" class="nav-link" id="text-color">View All User</a>
+                        </li>
+                    <?php elseif($user->role_id == 2): ?>
+                        <li class="nav-item active">
+                            <a href="<?php echo e(route('order.history',$user->id)); ?>" class="nav-link" id="text-color">View Transaction History</a>
+                        </li>
+                        <li class="nav-link" id="divider">|</li>
+                        <li class="nav-item active">
+                            <a href="/carts/<?php echo e($user->id); ?>" class="nav-link" id="text-color">View Cart</a>
+                        </li>
+                    <?php endif; ?>
+                        <li class="nav-link" id="divider">|</li>
+
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" style="color: #ffffff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <?php echo e($user->username); ?>
 
                             </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div>
+                                    <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"--}}
+                                       onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                                        <?php echo e(__('Logout')); ?>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    <?php echo e(__('Logout')); ?>
-
-                                </a>
-
-                                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
-                                    <?php echo csrf_field(); ?>
-                                </form>
+                                    </a>
+                                    <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">--}}
+                                        <?php echo csrf_field(); ?>
+                                    </form>
+                                </div>
                             </div>
                         </li>
-                    </ul>
-
-                    <?php if($user->role_id == 1): ?>
-                        <a href="<?php echo e(route('users.transaction')); ?>" class="authColor">View All User Transaction |</a>
-                    <a href="<?php echo e(route('users.index')); ?>" class="authColor">View All User |</a>
-                    <?php elseif($user->role_id == 2): ?>
-                        <a href="<?php echo e(route('order.history',$user->id)); ?>" class="authColor">View Transaction History |</a>
-                    <a href="/carts/<?php echo e($user->id); ?>" class="authColor">View Cart |</a>
-                    <?php endif; ?>
-
-                    <?php endif; ?>
-
-                <?php else: ?>
-                <a href="<?php echo e(route('login')); ?>" class="authColor">Login |</a>
-                <a href="<?php echo e(route('register')); ?>" class="authColor">Register</a>
                 <?php endif; ?>
-            </li>
+            <?php else: ?>
+                <li class="nav-item active">
+                    <a href="<?php echo e(route('login')); ?>" class="nav-link"  id="text-color">Login</a>
+                </li>
+                <li class="nav-link" id="divider">|</li>
+                <li class="nav-item active">
+                    <a href="<?php echo e(route('register')); ?>" class="nav-link" id="text-color">Register</a>
+                </li>
+            <?php endif; ?>
         </ul>
-
-
+    </div>
 </nav>
 
     <div class="container">

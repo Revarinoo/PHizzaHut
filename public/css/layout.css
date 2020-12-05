@@ -1,19 +1,23 @@
 .bg-custom {
     background: #DF3821;
-    /*height: 100px;*/
 }
 
 .right-position {
-    margin-top: -65px;
-    margin-right: 70px;
+    margin-right: 120px;
 }
 
-.authColor {
+.left-position {
+    margin-left: 120px;
+}
+
+#divider {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #ffffff; !important;
+}
+
+#text-color {
     color: #ffffff;
-}
-
-.authColor:hover {
-    color: #ffe0e0;
 }
 
 a:hover {

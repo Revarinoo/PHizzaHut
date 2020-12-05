@@ -1,0 +1,16 @@
+.custom-card {
+    margin-top: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.card-title {
+    background-color: #DF3821;
+}
+
+.custom-card-body {
+    padding-left: 40px;
+}
+
+#image {
+    height: 45px;
+}

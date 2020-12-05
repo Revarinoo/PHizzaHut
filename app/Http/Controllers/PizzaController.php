@@ -50,7 +50,13 @@ class PizzaController extends Controller
      */
     public function create()
     {
-        return view('pizza.add');
+        if(Auth::check()){
+            $user = Auth::user();
+        }
+        else{
+            $user = "Guest";
+        }
+        return view('pizza.add', compact('user'));
     }
 
     /**
@@ -100,7 +106,13 @@ class PizzaController extends Controller
      */
     public function edit(Pizza $pizza)
     {
-        return view('pizza.edit',compact('pizza'));
+        if(Auth::check()){
+            $user = Auth::user();
+        }
+        else{
+            $user = "Guest";
+        }
+        return view('pizza.edit',compact('pizza','user'));
     }
 
     /**

@@ -1,9 +1,9 @@
 <?php $__env->startSection('content'); ?>
-
+    <link rel="stylesheet" href="<?php echo e(asset('css/addPizza.css')); ?>">
     <div class="container">
-        <div class="card">
-            <h5 class="card-header text-center">Add New Pizza</h5>
-            <div class="card-body">
+        <div class="card custom-card">
+            <h3 class="card-header text-center text-light card-title">Add Pizza</h3>
+            <div class="card-body custom-card-body">
                 <form action="<?php echo e(route('pizza.store')); ?>" method="POST" enctype="multipart/form-data">
                     <?php echo csrf_field(); ?>
                     <div class="form-group row">

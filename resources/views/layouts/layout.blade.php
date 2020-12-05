@@ -13,55 +13,76 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-custom">
-    <a class="navbar-brand container" href="{{route('pizza.index')}}">
-            <img src="/storage/images/logo.png" width="110" height="50" alt="" loading="lazy">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-custom">
+    <a class="navbar-brand left-position" href="{{route('pizza.index')}}">
+        <img src="{{url('storage/images/logo.png')}}" width="110" height="50" alt="" >
     </a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item right-position">
-                @if(isset($user))
-                    @if($user == "Guest")
-                    <a href="{{route('login')}}" class="authColor">Login |</a>
-                    <a href="{{route('register')}}" class="authColor">Register</a>
-                    @else
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ $user->username }}
-                            </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto right-position">
+            @if(isset($user))
+                @if($user == "Guest")
+                    <li class="nav-item active">
+                        <a href="{{route('login')}}" class="nav-link" id="text-color">Login</a>
+                    </li>
+                    <li class="nav-link" id="divider">|</li>
+                    <li class="nav-item active">
+                        <a href="{{route('register')}}" class="nav-link" id="text-color">Register</a>
+                    </li>
+                @else
 
                     @if($user->role_id == 1)
-                        <a href="{{route('users.transaction')}}" class="authColor">View All User Transaction |</a>
-                    <a href="{{route('users.index')}}" class="authColor">View All User |</a>
+                        <li class="nav-item active">
+                            <a href="{{route('users.transaction')}}" class="nav-link" id="text-color">View All User Transaction</a>
+                        </li>
+                        <li class="nav-link" id="divider">|</li>
+                        <li class="nav-item active">
+                            <a href="{{route('users.index')}}" class="nav-link" id="text-color">View All User</a>
+                        </li>
                     @elseif($user->role_id == 2)
-                        <a href="{{route('order.history',$user->id)}}" class="authColor">View Transaction History |</a>
-                    <a href="/carts/{{$user->id}}" class="authColor">View Cart |</a>
+                        <li class="nav-item active">
+                            <a href="{{route('order.history',$user->id)}}" class="nav-link" id="text-color">View Transaction History</a>
+                        </li>
+                        <li class="nav-link" id="divider">|</li>
+                        <li class="nav-item active">
+                            <a href="/carts/{{$user->id}}" class="nav-link" id="text-color">View Cart</a>
+                        </li>
                     @endif
+                        <li class="nav-link" id="divider">|</li>
 
-                    @endif
-
-                @else
-                <a href="{{route('login')}}" class="authColor">Login |</a>
-                <a href="{{route('register')}}" class="authColor">Register</a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" style="color: #ffffff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ $user->username }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"--}}
+                                       onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">--}}
+                                        @csrf
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
                 @endif
-            </li>
+            @else
+                <li class="nav-item active">
+                    <a href="{{route('login')}}" class="nav-link"  id="text-color">Login</a>
+                </li>
+                <li class="nav-link" id="divider">|</li>
+                <li class="nav-item active">
+                    <a href="{{route('register')}}" class="nav-link" id="text-color">Register</a>
+                </li>
+            @endif
         </ul>
-
-
+    </div>
 </nav>
 
     <div class="container">

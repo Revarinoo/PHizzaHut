@@ -50,8 +50,13 @@ class OrderController extends Controller
     public function show(Order $order)
     {
         $orderdetails = $order->orderdetail;
-        return view('transaction.detail',compact('orderdetails'));
-        // return $orderdetails->first()->pizza;
+        if(Auth::check()){
+            $user = Auth::user();
+        }
+        else{
+            $user = "Guest";
+        }
+        return view('transaction.detail',compact('orderdetails','user'));
     }
 
     /**

@@ -29,8 +29,8 @@
             <div class="card d-inline-block ml-2 mt-2 mb-3 mr-2 custom-pizza" >
                 <form action="{{route('pizza.show',$pizza->id)}}" method="POST">
                     <a href="{{route('pizza.show',$pizza->id)}}">
-                <div class="imgwrap">    
-                    <img class="card-img-top" src="{{url('storage/images/'.$pizza->image)}}" alt="Card image cap">
+                <div class="imgwrap">
+                    <img class="card-img-top" src="{{url('storage/images/'.$pizza->image)}}" style="height: 300px; width: 318px;" alt="Card image cap">
                 </div>
                 <div class="card-body">
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>
@@ -40,8 +40,8 @@
                     <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
                 </div>
                 </div>
-                
-               
+
+
             </div>
             </a>
                @endforeach
