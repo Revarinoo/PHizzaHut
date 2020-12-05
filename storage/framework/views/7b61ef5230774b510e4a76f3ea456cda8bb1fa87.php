@@ -47,7 +47,7 @@
                     </ul>
 
                     <?php if($user->role_id == 1): ?>
-                        <a href="" class="authColor">View All User Transaction |</a>
+                        <a href="<?php echo e(route('users.transaction')); ?>" class="authColor">View All User Transaction |</a>
                     <a href="<?php echo e(route('users.index')); ?>" class="authColor">View All User |</a>
                     <?php elseif($user->role_id == 2): ?>
                         <a href="<?php echo e(route('order.history',$user->id)); ?>" class="authColor">View Transaction History |</a>

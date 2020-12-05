@@ -18,6 +18,8 @@ class PizzaController extends Controller
         $this->middleware('admin')->only('create');
         $this->middleware('admin')->only('store');
         $this->middleware('admin')->only('destroy');
+        $this->middleware('admin')->only('update');
+        $this->middleware('admin')->only('edit');
     }
 
     /**
@@ -37,7 +39,7 @@ class PizzaController extends Controller
 
         $search = $request->get('pizzaname');
         $pizzas = Pizza::where('name','like','%'.$search.'%')->paginate(6);
-        // $pizzas = Pizza::paginate(6);
+
         return view('pizza.index',compact('pizzas','user'));
     }
 

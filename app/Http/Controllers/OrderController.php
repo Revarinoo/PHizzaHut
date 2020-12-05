@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -49,7 +50,6 @@ class OrderController extends Controller
     public function show(Order $order)
     {
         $orderdetails = $order->orderdetail;
-        // return $orderdetails;
         return view('transaction.detail',compact('orderdetails'));
     }
 
