@@ -4,8 +4,8 @@
 
     <div class="container">
         
-        <div class="card">
-            <h3 class="card-header text-center">Edit Pizza Details</h3>
+        <div class="card mt-5">
+            <h3 class="card-header text-center text-light" style="background-color: #DF3821">Edit Pizza Details</h3>
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="{{url('storage/images/'.$pizza->image)}}" class="card-img img-detail" alt="Pizza Image">

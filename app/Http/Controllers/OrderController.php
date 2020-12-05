@@ -51,6 +51,7 @@ class OrderController extends Controller
     {
         $orderdetails = $order->orderdetail;
         return view('transaction.detail',compact('orderdetails'));
+        // return $orderdetails->first()->pizza;
     }
 
     /**

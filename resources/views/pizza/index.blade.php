@@ -35,8 +35,10 @@
                 <div class="card-body">
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->price}}</h5>
-                <a href="{{route('pizza.edit',$pizza->id)}}" class="btn btn-primary">Update</a>
-                <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
+                <div class="text-center">
+                    <a href="{{route('pizza.edit',$pizza->id)}}" class="btn btn-primary">Update</a>
+                    <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
+                </div>
                 </div>
                 
                
@@ -45,7 +47,6 @@
                @endforeach
            </form>
         </div>
-
         {{$pizzas->links()}}
     </div>
 

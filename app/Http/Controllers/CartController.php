@@ -86,7 +86,7 @@ class CartController extends Controller
             $this->destroy($cart->id);
             $detail->save();
         }
-
+        return Redirect::back();
     }
     /**
      * Show the form for editing the specified resource.
