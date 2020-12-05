@@ -1,11 +1,12 @@
 
 
 <?php $__env->startSection('content'); ?>
+<link rel="stylesheet" href="<?php echo e(asset('css/register.css')); ?>">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header"><?php echo e(__('Login')); ?></div>
+            <div class="card custom-card">
+                <div class="card-header bg-header"><?php echo e(__('Login')); ?></div>
 
                 <div class="card-body">
                     <form method="POST" action="<?php echo e(route('login')); ?>">
