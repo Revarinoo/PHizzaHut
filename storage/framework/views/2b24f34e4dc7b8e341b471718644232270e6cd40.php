@@ -16,7 +16,7 @@
                             <label for="username" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Username')); ?></label>
 
                             <div class="col-md-6">
-                                <input id="username" type="text" class="form-control <?php $__errorArgs = ['name'];
+                                <input id="username" type="text" class="form-control <?php $__errorArgs = ['username'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -25,7 +25,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="username" value="<?php echo e(old('username')); ?>" required autocomplete="username" autofocus>
 
-                                <?php $__errorArgs = ['name'];
+                                <?php $__errorArgs = ['username'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -163,7 +163,7 @@ unset($__errorArgs, $__bag); ?>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Gender')); ?></label>
                             <div class="col-md-6 custom-radio" >
-                                <input type="radio" name="gender" id="Male" value="Male"  >
+                                <input type="radio" name="gender" id="Male" value="Male">
                                 <label for="Male">Male </label>
                                 <input type="radio" name="gender" id="Female" value="Female" required>
                                 <label for="Female">Female </label>

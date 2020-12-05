@@ -27,18 +27,20 @@
 
             @foreach ($pizzas as $pizza)
            <form action="{{route('pizza.show',$pizza->id)}}" method="POST">
-            <a class="card d-inline-block ml-2 mt-2 mb-3 mr-2 custom-pizza" href="{{route('pizza.show',$pizza->id)}}">
+            <a href="{{route('pizza.show',$pizza->id)}}">
+            <div class="card d-inline-block ml-2 mt-2 mb-3 mr-2 custom-pizza" >
                 <div class="imgwrap">    
                     <img class="card-img-top" src="{{url('storage/images/'.$pizza->image)}}" alt="Card image cap">
                 </div>
                 <div class="card-body">
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->price}}</h5>
-                <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
                 <a href="{{route('pizza.edit',$pizza->id)}}" class="btn btn-primary">Update</a>
+                <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
                 </div>
                 
                
+            </div>
             </a>
                @endforeach
            </form>
