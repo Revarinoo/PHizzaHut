@@ -31,30 +31,16 @@
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/OrderPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/OrderPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cart/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/transaction/allUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaction/allUser.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/transaction/history.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/transaction/history.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/EaADKdr5hPuh8VblBvNq4xAa0wM2XReoj6Q5018K" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/4tw6m42Pial1K6inq4jSKyd39e8Vsv8k6ZXuyg6z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/8lhrZB1U1cUnJ1kcLEScRpMTwmmPpqCtypn5Bgrm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/Jx3HJT98taRJKWMyaxaCu88mjAIyAZ3VUk2y0FaD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/LJ88u81mTdqyAxQTIUmFQLQeVZZrHj7NndpXUPg1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/amHFPJ4xzaE880SiwxUcQIUmldN3GYvSrpfaFyyN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/iE38fC7iBm3TpoX4sLAlxBguB12fs6ybrVVhZ7J1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/4e60650d9631b0f500adfaef3fdebb6edb51f266.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/4e60650d9631b0f500adfaef3fdebb6edb51f266.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5085ea16a3817960284d4f686ab621c78990d925.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/5085ea16a3817960284d4f686ab621c78990d925.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/7b61ef5230774b510e4a76f3ea456cda8bb1fa87.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/7b61ef5230774b510e4a76f3ea456cda8bb1fa87.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/a2b4c2764d22c1c70c40d2c699bc5b6a971253d6.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/a2b4c2764d22c1c70c40d2c699bc5b6a971253d6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b4aed3a59388424c7b7c17d086e675f7fb444414.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/b4aed3a59388424c7b7c17d086e675f7fb444414.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/e828d2e1978f32b966726dc4137f220591300689.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/e828d2e1978f32b966726dc4137f220591300689.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/AuthenticatesUsers.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +173,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -222,6 +208,7 @@
       <workItem from="1607181504539" duration="6838000" />
       <workItem from="1607241714968" duration="12000" />
       <workItem from="1607243475269" duration="7991000" />
+      <workItem from="1607268533841" duration="6680000" />
     </task>
     <servers />
   </component>
@@ -269,17 +256,21 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1606551645404" />
+    <state x="362" y="82" width="540" height="524" key="StructurePopup" timestamp="1607270201576">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="362" y="82" width="540" height="524" key="StructurePopup/0.0.1280.680@0.0.1280.680" timestamp="1607270201576" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1606825944473">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1606825944472" />
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607183572031">
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607273022832">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1607183572031" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1607256359978">
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1607273022832" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1607271112414">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607256359978" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607271112414" />
   </component>
 </project>
