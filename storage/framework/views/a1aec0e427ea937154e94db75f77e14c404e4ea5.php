@@ -7,9 +7,8 @@
             <hr class="my-4">
             <h3 class="ml-5 mb-3 text-black-50">Order it Now!</h3>
         </div>
-                 
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', App\Pizza::class)): ?>
-                    <button class="btn btn-primary ml-5" type="submit" onclick="location.href='<?php echo e(route('pizza.create')); ?>'">Add Pizza</button>
+                    <button class="btn btn-dark ml-5" type="submit" onclick="location.href='<?php echo e(route('pizza.create')); ?>'">Add Pizza</button>
                 <?php endif; ?> 
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->denies('modify', App\Pizza::class)): ?>
                 <form method="get">
@@ -20,7 +19,7 @@
                     </div>
                 </form>
                 <?php endif; ?>
-                
+
         <div class="row justify-content-center">
             <?php if($pizzas->count() ==0): ?>
                 <h5>Pizza Not Found</h5>
@@ -36,7 +35,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title text-center font-weight-bold"><?php echo e($pizza->name); ?></h5>
-                            <h5 class="card-title text-center font-weight-bold"><?php echo e($pizza->price); ?></h5>
+                            <h5 class="card-title text-center">Rp<?php echo e($pizza->price); ?></h5>
                             <div class="text-center">
                                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify',App\Pizza::class)): ?>
                                     <a href="<?php echo e(route('pizza.edit',$pizza->id)); ?>" class="btn btn-primary">Update</a>

@@ -7,9 +7,8 @@
             <hr class="my-4">
             <h3 class="ml-5 mb-3 text-black-50">Order it Now!</h3>
         </div>
-                 
                 @can('modify', App\Pizza::class)
-                    <button class="btn btn-primary ml-5" type="submit" onclick="location.href='{{route('pizza.create')}}'">Add Pizza</button>
+                    <button class="btn btn-dark ml-5" type="submit" onclick="location.href='{{route('pizza.create')}}'">Add Pizza</button>
                 @endcan 
                 @cannot('modify', App\Pizza::class)
                 <form method="get">
@@ -20,7 +19,7 @@
                     </div>
                 </form>
                 @endcannot
-                
+
         <div class="row justify-content-center">
             @if ($pizzas->count() ==0)
                 <h5>Pizza Not Found</h5>
@@ -36,7 +35,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>
-                            <h5 class="card-title text-center font-weight-bold">{{$pizza->price}}</h5>
+                            <h5 class="card-title text-center">Rp{{$pizza->price}}</h5>
                             <div class="text-center">
                                 @can('modify',App\Pizza::class)
                                     <a href="{{route('pizza.edit',$pizza->id)}}" class="btn btn-primary">Update</a>
