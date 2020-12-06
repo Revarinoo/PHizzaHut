@@ -24,7 +24,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto right-position">
-            
+
                 <?php if(!Auth::user()): ?>
                     <li class="nav-item active">
                         <a href="<?php echo e(route('login')); ?>" class="nav-link" id="text-color">Login</a>
@@ -33,36 +33,38 @@
                     <li class="nav-item active">
                         <a href="<?php echo e(route('register')); ?>" class="nav-link" id="text-color">Register</a>
                     </li>
-                    
+
                 <?php endif; ?>
 
-                    
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', App\Order::class)): ?>
                         <li class="nav-item active">
-                            <a href="<?php echo e(route('users.transaction')); ?>" class="nav-link" id="text-color">View All User Transaction</a>
+                            <a href="<?php echo e(route('order.transaction')); ?>" class="nav-link" id="text-color">View All User Transaction</a>
                         </li>
-                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('getUser', App\User::class)): ?>
                         <li class="nav-link" id="divider">|</li>
+                    <?php endif; ?>
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('isAdmin', App\User::class)): ?>
                         <li class="nav-item active">
                             <a href="<?php echo e(route('users.index')); ?>" class="nav-link" id="text-color">View All User</a>
                         </li>
-                        <?php endif; ?>
-                    
-                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('history', App\Order::class)): ?>  
+                    <?php endif; ?>
+
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('isMember', App\User::class)): ?>
                         <li class="nav-item active">
-                            <a href="<?php echo e(route('order.history',$user->id)); ?>" class="nav-link" id="text-color">View Transaction History</a>
+                            <a href="<?php echo e(route('user.history',Auth::user()->id)); ?>" class="nav-link" id="text-color">View Transaction History</a>
                         </li>
                         <?php endif; ?>
                         <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', App\Cart::class)): ?>
                         <li class="nav-link" id="divider">|</li>
                         <li class="nav-item active">
-                            <a href="/carts/<?php echo e($user->id); ?>" class="nav-link" id="text-color">View Cart</a>
+                            <a href="<?php echo e(route('carts.show',Auth::user()->id)); ?>" class="nav-link" id="text-color">View Cart</a>
                         </li>
                         <?php endif; ?>
-                        
-                    
-                        
-                        
+
+
+
+
                         <?php if(Auth::user()): ?>
+                        <li class="nav-link" id="divider">|</li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" style="color: #ffffff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <?php echo e(Auth::user()->username); ?>

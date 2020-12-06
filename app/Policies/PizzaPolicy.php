@@ -21,4 +21,13 @@ class PizzaPolicy
     public function modify(User $user){
         return $user->role_id === 1;
     }
+    public function searchPizza(User $user){
+        // if(isset($user)){
+        //     dd($user);
+        // }else{
+        //     return true;
+        // }
+        echo("as");
+        // return(true);
+    }
 }
