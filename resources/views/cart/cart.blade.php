@@ -17,11 +17,11 @@
                 <form action="{{route('carts.update',$cart->id)}}" method="POST">
                         @csrf
                         @method('PUT')
-                        <p class="card-text">Quantity: 
+                        <p class="card-text">Quantity:
                             <input type="number" min="1" name="quantity" class="qty-form" value="{{$cart->quantity}}">
-                        <button type="submit" class="btn btn-primary ml-2">Update Quantity</button> 
+                        <button type="submit" class="btn btn-primary ml-2">Update Quantity</button>
                         </p>
-                        
+
                 </form>
                 <form action="{{route('carts.destroy',$cart->id)}}" method="POST">
                     @csrf
@@ -40,10 +40,10 @@
                 <button type="submit" class="btn btn-dark">Checkout</button>
             </form>
         </div>
-        
+
     @else
         <h2 class="text-center mt-4 mb-4">Cart Empty</h2>
     @endif
-    
+
 </div
 @endsection

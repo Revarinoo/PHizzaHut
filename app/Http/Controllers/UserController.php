@@ -55,17 +55,14 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function transaction()
+    public function history(User $user)
     {
-        $listorders = Order::all();
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
-        return view('transaction.allUser',compact('listorders','user'));
+        $transactions = $user->order;
+        $this->authorize('isMember',User::class);
+        return view('transaction.history', compact('transactions'));
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -100,4 +97,5 @@ class UserController extends Controller
     {
         //
     }
+
 }

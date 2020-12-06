@@ -14,14 +14,6 @@ use Illuminate\Support\Facades\Storage;
 class PizzaController extends Controller
 {
 
-    // public function __construct(){
-    //     $this->middleware('admin')->only('create');
-    //     $this->middleware('admin')->only('store');
-    //     $this->middleware('admin')->only('destroy');
-    //     $this->middleware('admin')->only('update');
-    //     $this->middleware('admin')->only('edit');
-    // }
-
     /**
      * Display a listing of the resource.
      *
@@ -30,17 +22,10 @@ class PizzaController extends Controller
     public function index(Request $request)
     {
 
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
-
         $search = $request->get('pizzaname');
         $pizzas = Pizza::where('name','like','%'.$search.'%')->paginate(6);
 
-        return view('pizza.index',compact('pizzas','user'));
+        return view('pizza.index',compact('pizzas'));
     }
 
     /**
@@ -85,14 +70,7 @@ class PizzaController extends Controller
     {
         $pizzas = Pizza::findOrFail($id);
 
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
-
-        return view('pizza.detail',compact('pizzas', 'user'));
+        return view('pizza.detail',compact('pizzas'));
     }
 
     /**

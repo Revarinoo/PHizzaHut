@@ -49,14 +49,24 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
+        $this->authorize('isUser',Order::class);
         $orderdetails = $order->orderdetail;
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
-        return view('transaction.detail',compact('orderdetails','user'));
+
+        return view('transaction.detail',compact('orderdetails'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function transaction()
+    {
+        $this->authorize('modify',Order::class);
+        $listorders = Order::all();
+
+        return view('transaction.allUser',compact('listorders'));
     }
 
     /**
@@ -93,21 +103,5 @@ class OrderController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function history(User $user)
-    {
-        $transactions = $user->order;
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
-        return view('transaction.history', compact('transactions','user'));
-    }
+
 }

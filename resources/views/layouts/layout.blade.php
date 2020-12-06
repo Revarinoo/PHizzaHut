@@ -24,7 +24,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto right-position">
-            {{-- @if(Auth::user()) --}}
+
                 @if(!Auth::user())
                     <li class="nav-item active">
                         <a href="{{route('login')}}" class="nav-link" id="text-color">Login</a>
@@ -33,36 +33,38 @@
                     <li class="nav-item active">
                         <a href="{{route('register')}}" class="nav-link" id="text-color">Register</a>
                     </li>
-                    {{-- <li class="nav-link" id="divider">|</li> --}}
+
                 @endif
 
-                    {{-- @if($user->role_id == 1) --}}
+                    @can('modify', App\Order::class)
                         <li class="nav-item active">
-                            <a href="{{route('users.transaction')}}" class="nav-link" id="text-color">View All User Transaction</a>
+                            <a href="{{route('order.transaction')}}" class="nav-link" id="text-color">View All User Transaction</a>
                         </li>
-                        @can('getUser', App\User::class)
                         <li class="nav-link" id="divider">|</li>
+                    @endcan
+                    @can('isAdmin', App\User::class)
                         <li class="nav-item active">
                             <a href="{{route('users.index')}}" class="nav-link" id="text-color">View All User</a>
                         </li>
-                        @endcan
-                    {{-- @elseif($user->role_id == 2) --}}
-                        @can('history', App\Order::class)  
+                    @endcan
+
+                        @can('isMember', App\User::class)
                         <li class="nav-item active">
-                            <a href="{{route('order.history',$user->id)}}" class="nav-link" id="text-color">View Transaction History</a>
+                            <a href="{{route('user.history',Auth::user()->id)}}" class="nav-link" id="text-color">View Transaction History</a>
                         </li>
                         @endcan
                         @can('modify', App\Cart::class)
                         <li class="nav-link" id="divider">|</li>
                         <li class="nav-item active">
-                            <a href="/carts/{{$user->id}}" class="nav-link" id="text-color">View Cart</a>
+                            <a href="{{route('carts.show',Auth::user()->id)}}" class="nav-link" id="text-color">View Cart</a>
                         </li>
                         @endcan
-                        
-                    {{-- @endif --}}
-                        
-                        {{-- <li class="nav-link" id="divider">|</li> --}}
+
+
+
+
                         @if (Auth::user())
+                        <li class="nav-link" id="divider">|</li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" style="color: #ffffff;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->username }}

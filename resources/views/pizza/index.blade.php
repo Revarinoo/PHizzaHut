@@ -10,7 +10,7 @@
                 @can('modify', App\Pizza::class)
                     <button class="btn btn-primary ml-5" type="submit" onclick="location.href='{{route('pizza.create')}}'">Add Pizza</button>
                 @endcan
-  
+
                 <form method="get">
                     <div class="input-group mb-3">
                         <h5 class="text-dark ml-5 mt-1">Search Pizza: </h5>
@@ -29,25 +29,25 @@
             <div class="card d-inline-block ml-2 mt-2 mb-3 mr-2 custom-pizza" >
                 <form action="{{route('pizza.show',$pizza->id)}}" method="POST">
                     <a href="{{route('pizza.show',$pizza->id)}}">
-                <div class="imgwrap">
-                    <img class="card-img-top" src="{{url('storage/images/'.$pizza->image)}}" style="height: 300px; width: 318px;" alt="Card image cap">
-                </div>
-                <div class="card-body">
-                <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>
-                <h5 class="card-title text-center font-weight-bold">{{$pizza->price}}</h5>
-                <div class="text-center">
-                    @can('modify',App\Pizza::class)
-                        <a href="{{route('pizza.edit',$pizza->id)}}" class="btn btn-primary">Update</a>
-                        <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
-                    @endcan
-                </div>
-                </div>
-
-
+                        <div class="imgwrap">
+                            <img class="card-img-top" src="{{url('storage/images/'.$pizza->image)}}" style="height: 300px; width: 318px;" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>
+                            <h5 class="card-title text-center font-weight-bold">{{$pizza->price}}</h5>
+                            <div class="text-center">
+                                @can('modify',App\Pizza::class)
+                                    <a href="{{route('pizza.edit',$pizza->id)}}" class="btn btn-primary">Update</a>
+                                    <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
+                                @endcan
+                            </div>
+                        </div>
+                    </a>
+                </form>
             </div>
-            </a>
-               @endforeach
-           </form>
+
+            @endforeach
+
         </div>
         <div class="row mt-3 mb-3 justify-content-center">
             {{$pizzas->links()}}

@@ -24,4 +24,10 @@ class OrderPolicy
     public function history(User $user){
         return $user->role_id === 2;
     }
+
+    public function isUser(User $user){
+        if($user->role_id == 1 || $user->role_id == 2) return true;
+        return false;
+    }
+
 }

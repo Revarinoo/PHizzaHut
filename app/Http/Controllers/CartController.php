@@ -70,6 +70,7 @@ class CartController extends Controller
         $user = Auth::user();
         return view('cart.cart',compact('carts','user'));
     }
+
     public function checkout(User $user){
         $this->authorize('modify',Cart::class);
         $carts = $user->cart;

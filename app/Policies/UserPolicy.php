@@ -18,8 +18,12 @@ class UserPolicy
     {
         //
     }
-    public function getUser(User $user){
+    public function isAdmin(User $user){
         return $user->role_id === 1;
     }
-    
+
+    public function isMember(User $user){
+        return $user->role_id === 2;
+    }
+
 }
