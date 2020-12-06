@@ -17,11 +17,11 @@
                 <form action="<?php echo e(route('carts.update',$cart->id)); ?>" method="POST">
                         <?php echo csrf_field(); ?>
                         <?php echo method_field('PUT'); ?>
-                        <p class="card-text">Quantity: 
+                        <p class="card-text">Quantity:
                             <input type="number" min="1" name="quantity" class="qty-form" value="<?php echo e($cart->quantity); ?>">
-                        <button type="submit" class="btn btn-primary ml-2">Update Quantity</button> 
+                        <button type="submit" class="btn btn-primary ml-2">Update Quantity</button>
                         </p>
-                        
+
                 </form>
                 <form action="<?php echo e(route('carts.destroy',$cart->id)); ?>" method="POST">
                     <?php echo csrf_field(); ?>
@@ -40,11 +40,11 @@
                 <button type="submit" class="btn btn-dark">Checkout</button>
             </form>
         </div>
-        
+
     <?php else: ?>
         <h2 class="text-center mt-4 mb-4">Cart Empty</h2>
     <?php endif; ?>
-    
+
 </div
 <?php $__env->stopSection(); ?>
 

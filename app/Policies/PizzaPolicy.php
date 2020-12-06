@@ -21,4 +21,5 @@ class PizzaPolicy
     public function modify(User $user){
         return $user->role_id === 1;
     }
+    
 }
