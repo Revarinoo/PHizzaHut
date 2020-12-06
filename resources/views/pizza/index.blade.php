@@ -7,9 +7,10 @@
             <hr class="my-4">
             <h3 class="ml-5 mb-3 text-black-50">Order it Now!</h3>
         </div>
-            @if ($user!= "Guest" && $user->role_id == 1)
-                <button class="btn btn-primary ml-5" type="submit" onclick="location.href='{{route('pizza.create')}}'">Add Pizza</button>
-            @else
+                @can('modify', App\Pizza::class)
+                    <button class="btn btn-primary ml-5" type="submit" onclick="location.href='{{route('pizza.create')}}'">Add Pizza</button>
+                @endcan
+  
                 <form method="get">
                     <div class="input-group mb-3">
                         <h5 class="text-dark ml-5 mt-1">Search Pizza: </h5>
@@ -17,7 +18,6 @@
                         <button class="btn btn-primary ml-3 mr-5" type="submit">Search</button>
                     </div>
                 </form>
-            @endif
 
         <div class="row justify-content-center">
             @if ($pizzas->count() ==0)
@@ -36,8 +36,10 @@
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->name}}</h5>
                 <h5 class="card-title text-center font-weight-bold">{{$pizza->price}}</h5>
                 <div class="text-center">
-                    <a href="{{route('pizza.edit',$pizza->id)}}" class="btn btn-primary">Update</a>
-                    <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
+                    @can('modify',App\Pizza::class)
+                        <a href="{{route('pizza.edit',$pizza->id)}}" class="btn btn-primary">Update</a>
+                        <a href="{{route('pizza.delete',$pizza->id)}}" class="btn btn-danger">Delete</a>
+                    @endcan
                 </div>
                 </div>
 

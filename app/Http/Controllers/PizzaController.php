@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Storage;
 class PizzaController extends Controller
 {
 
-    public function __construct(){
-        $this->middleware('admin')->only('create');
-        $this->middleware('admin')->only('store');
-        $this->middleware('admin')->only('destroy');
-        $this->middleware('admin')->only('update');
-        $this->middleware('admin')->only('edit');
-    }
+    // public function __construct(){
+    //     $this->middleware('admin')->only('create');
+    //     $this->middleware('admin')->only('store');
+    //     $this->middleware('admin')->only('destroy');
+    //     $this->middleware('admin')->only('update');
+    //     $this->middleware('admin')->only('edit');
+    // }
 
     /**
      * Display a listing of the resource.
@@ -50,12 +50,8 @@ class PizzaController extends Controller
      */
     public function create()
     {
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
+        $this->authorize('modify',Pizza::class);
+        $user = Auth::user();
         return view('pizza.add', compact('user'));
     }
 
@@ -67,6 +63,7 @@ class PizzaController extends Controller
      */
     public function store(PizzaAddRequest $request)
     {
+        $this->authorize('modify',Pizza::class);
         $input = $request->all();
 
         $file = $request->file('image');
@@ -106,12 +103,8 @@ class PizzaController extends Controller
      */
     public function edit(Pizza $pizza)
     {
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
+        $this->authorize('modify',Pizza::class);
+        $user = Auth::user();
         return view('pizza.edit',compact('pizza','user'));
     }
 
@@ -124,6 +117,7 @@ class PizzaController extends Controller
      */
     public function update(Request $request, Pizza $pizza)
     {
+        $this->authorize('modify',Pizza::class);
         $pizza->name = $request->name;
         $pizza->price = $request->price;
         $pizza->description = $request->description;
@@ -144,16 +138,10 @@ class PizzaController extends Controller
      */
     public function delete($id)
     {
+        $this->authorize('modify',Pizza::class);
         $pizzas = Pizza::findOrFail($id);
-
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
-
-        return view('pizza.delete',compact('pizzas', 'user'));
+        $user = Auth::user();
+        return view('pizza.delete',compact('pizzas','user'));
     }
 
     /**
@@ -164,11 +152,10 @@ class PizzaController extends Controller
      */
     public function destroy($id)
     {
+        $this->authorize('modify',Pizza::class);
         $pizza = Pizza::findOrFail($id);
         if($pizza->image != null) Storage::delete('public/images/'. $pizza->image);
         $pizza->delete();
-
-
         return redirect('/pizza');
     }
 

@@ -40,6 +40,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('modify',Cart::class);
         $input = $request->all();
         $cart = Cart::where('pizza_id',$request->pizza_id)->first();
 
@@ -64,16 +65,13 @@ class CartController extends Controller
      */
     public function show(User $user)
     {
+        $this->authorize('modify',Cart::class);
         $carts = $user->cart;
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
+        $user = Auth::user();
         return view('cart.cart',compact('carts','user'));
     }
     public function checkout(User $user){
+        $this->authorize('modify',Cart::class);
         $carts = $user->cart;
         $order = new Order;
         $order->user_id = $carts->first()->user_id;
@@ -108,6 +106,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->authorize('modify',Cart::class);
         $input = $request->all();
         Auth::user()->cart()->whereId($id)->first()->update($input);
 
@@ -122,6 +121,7 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
+        $this->authorize('modify',Cart::class);
         Cart::destroy($id);
         return Redirect::back();
     }

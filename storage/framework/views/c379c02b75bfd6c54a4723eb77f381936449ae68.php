@@ -13,7 +13,7 @@
                         <h5 class="card-title custom-name"><?php echo e($pizzas->name); ?></h5>
                         <p class="card-text"><?php echo e($pizzas->description); ?></p>
                         <p class="card-text">Rp <?php echo e($pizzas->price); ?></p>
-                        <?php if($user!= "Guest" && $user->role_id == 2): ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', App\Cart::class)): ?>
                         <form action="<?php echo e(route('carts.store')); ?>" style="margin-top: 40px;" method="POST">
                             <?php echo csrf_field(); ?>
                             <label for="quantity">Quantity : </label>

@@ -7,9 +7,10 @@
             <hr class="my-4">
             <h3 class="ml-5 mb-3 text-black-50">Order it Now!</h3>
         </div>
-            <?php if($user!= "Guest" && $user->role_id == 1): ?>
-                <button class="btn btn-primary ml-5" type="submit" onclick="location.href='<?php echo e(route('pizza.create')); ?>'">Add Pizza</button>
-            <?php else: ?>
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', App\Pizza::class)): ?>
+                    <button class="btn btn-primary ml-5" type="submit" onclick="location.href='<?php echo e(route('pizza.create')); ?>'">Add Pizza</button>
+                <?php endif; ?>
+  
                 <form method="get">
                     <div class="input-group mb-3">
                         <h5 class="text-dark ml-5 mt-1">Search Pizza: </h5>
@@ -17,7 +18,6 @@
                         <button class="btn btn-primary ml-3 mr-5" type="submit">Search</button>
                     </div>
                 </form>
-            <?php endif; ?>
 
         <div class="row justify-content-center">
             <?php if($pizzas->count() ==0): ?>
@@ -29,19 +29,21 @@
             <div class="card d-inline-block ml-2 mt-2 mb-3 mr-2 custom-pizza" >
                 <form action="<?php echo e(route('pizza.show',$pizza->id)); ?>" method="POST">
                     <a href="<?php echo e(route('pizza.show',$pizza->id)); ?>">
-                <div class="imgwrap">    
-                    <img class="card-img-top" src="<?php echo e(url('storage/images/'.$pizza->image)); ?>" alt="Card image cap">
+                <div class="imgwrap">
+                    <img class="card-img-top" src="<?php echo e(url('storage/images/'.$pizza->image)); ?>" style="height: 300px; width: 318px;" alt="Card image cap">
                 </div>
                 <div class="card-body">
                 <h5 class="card-title text-center font-weight-bold"><?php echo e($pizza->name); ?></h5>
                 <h5 class="card-title text-center font-weight-bold"><?php echo e($pizza->price); ?></h5>
                 <div class="text-center">
-                    <a href="<?php echo e(route('pizza.edit',$pizza->id)); ?>" class="btn btn-primary">Update</a>
-                    <a href="<?php echo e(route('pizza.delete',$pizza->id)); ?>" class="btn btn-danger">Delete</a>
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify',App\Pizza::class)): ?>
+                        <a href="<?php echo e(route('pizza.edit',$pizza->id)); ?>" class="btn btn-primary">Update</a>
+                        <a href="<?php echo e(route('pizza.delete',$pizza->id)); ?>" class="btn btn-danger">Delete</a>
+                    <?php endif; ?>
                 </div>
                 </div>
-                
-               
+
+
             </div>
             </a>
                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
