@@ -49,7 +49,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        $this->authorize('isUser',Order::class);
+        $this->authorize('isUser',$order);
         $orderdetails = $order->orderdetail;
 
         return view('transaction.detail',compact('orderdetails'));

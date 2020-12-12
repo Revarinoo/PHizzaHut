@@ -65,14 +65,16 @@ class CartController extends Controller
      */
     public function show(User $user)
     {
-        $this->authorize('modify',Cart::class);
-        $carts = $user->cart;
-        $user = Auth::user();
-        return view('cart.cart',compact('carts','user'));
+        // var_dump($user->cart->first());
+        if(Auth::user() != null && $user->id === Auth::user()->id){
+            $carts = $user->cart;
+            return view('cart.cart',compact('carts','user'));
+        }
+        $this->authorize('owner',$user->cart->first());
     }
 
     public function checkout(User $user){
-        $this->authorize('modify',Cart::class);
+        $this->authorize('owner',$user->cart->first());
         $carts = $user->cart;
         $order = new Order;
         $order->user_id = $carts->first()->user_id;
@@ -107,7 +109,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->authorize('modify',Cart::class);
+        $this->authorize('owner',Auth::user()->cart->first());
         $input = $request->all();
         Auth::user()->cart()->whereId($id)->first()->update($input);
 
@@ -122,7 +124,7 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        $this->authorize('modify',Cart::class);
+        $this->authorize('owner',Auth::user()->cart->first());
         Cart::destroy($id);
         return Redirect::back();
     }

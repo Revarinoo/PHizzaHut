@@ -93,7 +93,7 @@ class PizzaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pizza $pizza)
+    public function update(PizzaAddRequest $request, Pizza $pizza)
     {
         $this->authorize('modify',Pizza::class);
         $pizza->name = $request->name;
