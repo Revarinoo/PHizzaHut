@@ -17,15 +17,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        if(Auth::check()){
-            $user = Auth::user();
-        }
-        else{
-            $user = "Guest";
-        }
-
+        $this->authorize('isAdmin', User::class);
         $listusers = User::all();
-        return view('user.user',compact('listusers','user'));
+        return view('user.user',compact('listusers'));
     }
 
     /**

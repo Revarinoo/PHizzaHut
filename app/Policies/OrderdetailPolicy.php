@@ -18,4 +18,9 @@ class OrderdetailPolicy
     {
         //
     }
+
+    public function isUser(User $user){
+        if($user->role_id == 1 || $user->role_id == 2) return true;
+        return false;
+    }
 }

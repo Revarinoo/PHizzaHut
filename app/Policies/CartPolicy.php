@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use App\User;
+use App\Cart;
 
 class CartPolicy
 {
@@ -18,6 +19,11 @@ class CartPolicy
     {
         //
     }
+
+    public function owner(User $user, Cart $cart){
+        return $user->id === $cart->user_id;
+    }
+
     public function modify(User $user){
         return $user->role_id === 2;
     }

@@ -13,7 +13,7 @@
                         <h5 class="card-title custom-name">{{$pizzas->name}}</h5>
                         <p class="card-text">{{$pizzas->description}}</p>
                         <p class="card-text">Rp {{$pizzas->price}}</p>
-                        @can('modify', App\Cart::class)
+                        @can('isUser', App\Orderdetail::class)
                         <form action="{{route('carts.store')}}" style="margin-top: 40px;" method="POST">
                             @csrf
                             <label for="quantity">Quantity : </label>

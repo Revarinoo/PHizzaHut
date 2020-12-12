@@ -48,7 +48,7 @@ class LoginController extends Controller
 
     public function login(Request $request){
         if($request->remember){
-            Cookie::queue('remember',$request->input($this->username()),120);
+            Cookie::queue('remember',$request->input($this->username()),1);
         }
 
         else {

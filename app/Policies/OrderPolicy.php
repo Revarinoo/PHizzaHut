@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use App\User;
+use App\Order;
 
 class OrderPolicy
 {
@@ -25,8 +26,8 @@ class OrderPolicy
         return $user->role_id === 2;
     }
 
-    public function isUser(User $user){
-        if($user->role_id == 1 || $user->role_id == 2) return true;
+    public function isUser(User $user, Order $order){
+        if($user->role_id == 1 || $user->id == $order->user_id) return true;
         return false;
     }
 
