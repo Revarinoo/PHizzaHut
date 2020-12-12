@@ -12,8 +12,6 @@
 
 </head>
 <body>
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-custom">
     <a class="navbar-brand left-position" href="<?php echo e(route('pizza.index')); ?>">
         <img src="<?php echo e(url('storage/images/logo.png')); ?>" width="110" height="50" alt="" >
@@ -92,6 +90,10 @@
     <div class="container">
         <?php echo $__env->yieldContent('content'); ?>
     </div>
+
+    <footer class="page-footer bg-custom text-white" style="margin-top: 200px">
+        <div class="footer-copyright text-center py-3">Website By Ardi Dramilio and Revarino Putra</div>
+    </footer>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -23,7 +23,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="email_address" value="<?php echo e(old('email_address')); ?>" required autocomplete="email_address" autofocus>
+unset($__errorArgs, $__bag); ?>" name="email_address" value="<?php echo e(Cookie::get('remember')); ?>" required autocomplete="email_address" autofocus>
 
                                 <?php $__errorArgs = ['email_address'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -71,7 +71,7 @@ unset($__errorArgs, $__bag); ?>
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" <?php echo e(old('remember') ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" value="true">
 
                                     <label class="form-check-label" for="remember">
                                         <?php echo e(__('Remember Me')); ?>
