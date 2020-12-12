@@ -1,3 +1,4 @@
+
 <?php $__env->startSection('content'); ?>
     <link rel="stylesheet" href="<?php echo e(asset('css/index.pizza.css')); ?>">
     <div class="container">
@@ -7,9 +8,9 @@
             <h3 class="ml-5 mb-3 text-black-50">Order it Now!</h3>
         </div>
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', App\Pizza::class)): ?>
-                    <button class="btn btn-primary ml-5" type="submit" onclick="location.href='<?php echo e(route('pizza.create')); ?>'">Add Pizza</button>
-                <?php endif; ?>
-
+                    <button class="btn btn-dark ml-5" type="submit" onclick="location.href='<?php echo e(route('pizza.create')); ?>'">Add Pizza</button>
+                <?php endif; ?> 
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->denies('modify', App\Pizza::class)): ?>
                 <form method="get">
                     <div class="input-group mb-3">
                         <h5 class="text-dark ml-5 mt-1">Search Pizza: </h5>
@@ -17,6 +18,7 @@
                         <button class="btn btn-primary ml-3 mr-5" type="submit">Search</button>
                     </div>
                 </form>
+                <?php endif; ?>
 
         <div class="row justify-content-center">
             <?php if($pizzas->count() ==0): ?>
@@ -33,7 +35,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title text-center font-weight-bold"><?php echo e($pizza->name); ?></h5>
-                            <h5 class="card-title text-center font-weight-bold"><?php echo e($pizza->price); ?></h5>
+                            <h5 class="card-title text-center">Rp<?php echo e($pizza->price); ?></h5>
                             <div class="text-center">
                                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify',App\Pizza::class)): ?>
                                     <a href="<?php echo e(route('pizza.edit',$pizza->id)); ?>" class="btn btn-primary">Update</a>

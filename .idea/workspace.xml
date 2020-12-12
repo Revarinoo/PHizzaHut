@@ -30,17 +30,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/4tw6m42Pial1K6inq4jSKyd39e8Vsv8k6ZXuyg6z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/8lhrZB1U1cUnJ1kcLEScRpMTwmmPpqCtypn5Bgrm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/Jx3HJT98taRJKWMyaxaCu88mjAIyAZ3VUk2y0FaD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/LJ88u81mTdqyAxQTIUmFQLQeVZZrHj7NndpXUPg1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/amHFPJ4xzaE880SiwxUcQIUmldN3GYvSrpfaFyyN" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/iE38fC7iBm3TpoX4sLAlxBguB12fs6ybrVVhZ7J1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/4e60650d9631b0f500adfaef3fdebb6edb51f266.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/4e60650d9631b0f500adfaef3fdebb6edb51f266.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/CHQFMpBsKAX1yA7izn1tkmErrvqiJn63evunh4Y3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/MOOWFIMW49v7bviheDkKSs5wbg4uQdmbco8NeGaw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/Wr88QCTvaZwkefebqEU3GwMOEjdxhr3UNy5S3HCQ" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/YapXkJlItGeqPq7mGKrThizGVI0UdwZLGTpw1x6e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/dVPC9thdAea7MdsZVsT1mqfsLSVeuGN4U8JqVVQV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/hi2yG079D36ChNP5gAWxtjwKC12lZ2WpaJ2ZwBF1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/xg1BdZs9QuJ02kKC7tqwcKRrZZbalyIsvBFpnbPo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/7b61ef5230774b510e4a76f3ea456cda8bb1fa87.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/7b61ef5230774b510e4a76f3ea456cda8bb1fa87.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +171,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UTS_2201816783" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -209,6 +207,7 @@
       <workItem from="1607241714968" duration="12000" />
       <workItem from="1607243475269" duration="7991000" />
       <workItem from="1607268533841" duration="6680000" />
+      <workItem from="1607755279394" duration="623000" />
     </task>
     <servers />
   </component>
@@ -248,10 +247,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1607252181011" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1607254313512">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1607755519797">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607254313512" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607755519797" />
     <state x="477" y="264" key="NewPhpFileDialog" timestamp="1606551645404">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
