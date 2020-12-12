@@ -30,15 +30,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/82/b1/82b1c0b54a6d8f772c09aea1f403aa4a0bc52997" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/TSd98dLH3gBtd7T89ZuFR9fxC51oZG34Cjky7cVS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/N8RxMYCmLBeA5QlL6lzPDsbxk6TXtb1pjf9VjKJB" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/7b61ef5230774b510e4a76f3ea456cda8bb1fa87.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/7b61ef5230774b510e4a76f3ea456cda8bb1fa87.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/a2b4c2764d22c1c70c40d2c699bc5b6a971253d6.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/a2b4c2764d22c1c70c40d2c699bc5b6a971253d6.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +203,7 @@
       <workItem from="1607241714968" duration="12000" />
       <workItem from="1607243475269" duration="7991000" />
       <workItem from="1607268533841" duration="6680000" />
-      <workItem from="1607755279394" duration="7822000" />
+      <workItem from="1607755279394" duration="8470000" />
     </task>
     <servers />
   </component>

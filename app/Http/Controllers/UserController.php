@@ -51,9 +51,11 @@ class UserController extends Controller
      */
     public function history(User $user)
     {
-        $transactions = $user->order;
-        $this->authorize('isMember',User::class);
-        return view('transaction.history', compact('transactions'));
+        if(Auth::user() != null && $user->id === Auth::user()->id){
+            $transactions = $user->order;
+            return view('transaction.history', compact('transactions'));
+        }
+        $this->authorize('owner',$user->order->first());
     }
 
 
