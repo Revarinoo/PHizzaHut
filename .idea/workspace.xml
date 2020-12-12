@@ -30,15 +30,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/CHQFMpBsKAX1yA7izn1tkmErrvqiJn63evunh4Y3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/MOOWFIMW49v7bviheDkKSs5wbg4uQdmbco8NeGaw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/Wr88QCTvaZwkefebqEU3GwMOEjdxhr3UNy5S3HCQ" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/YapXkJlItGeqPq7mGKrThizGVI0UdwZLGTpw1x6e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/dVPC9thdAea7MdsZVsT1mqfsLSVeuGN4U8JqVVQV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/hi2yG079D36ChNP5gAWxtjwKC12lZ2WpaJ2ZwBF1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/xg1BdZs9QuJ02kKC7tqwcKRrZZbalyIsvBFpnbPo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/82/b1/82b1c0b54a6d8f772c09aea1f403aa4a0bc52997" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/TSd98dLH3gBtd7T89ZuFR9fxC51oZG34Cjky7cVS" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/7b61ef5230774b510e4a76f3ea456cda8bb1fa87.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/7b61ef5230774b510e4a76f3ea456cda8bb1fa87.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/a2b4c2764d22c1c70c40d2c699bc5b6a971253d6.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/a2b4c2764d22c1c70c40d2c699bc5b6a971253d6.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UTS_2201816783" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pertemuan5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -207,7 +208,7 @@
       <workItem from="1607241714968" duration="12000" />
       <workItem from="1607243475269" duration="7991000" />
       <workItem from="1607268533841" duration="6680000" />
-      <workItem from="1607755279394" duration="623000" />
+      <workItem from="1607755279394" duration="7822000" />
     </task>
     <servers />
   </component>
@@ -243,14 +244,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="398" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1606844623045" />
-    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607252181011">
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607757084287">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1607252181011" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1607755519797">
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1607757084287" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1607760699818">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607755519797" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607760699818" />
     <state x="477" y="264" key="NewPhpFileDialog" timestamp="1606551645404">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -267,9 +268,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1607273022832" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1607271112414">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1607756745725">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607271112414" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607756745725" />
   </component>
 </project>

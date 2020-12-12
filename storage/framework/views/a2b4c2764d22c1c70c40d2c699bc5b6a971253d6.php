@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
     <link rel="stylesheet" href="<?php echo e(asset('css/detail.css')); ?>">
     <div class="container">
@@ -17,7 +15,26 @@
                         <form action="<?php echo e(route('carts.store')); ?>" style="margin-top: 40px;" method="POST">
                             <?php echo csrf_field(); ?>
                             <label for="quantity">Quantity : </label>
-                            <input type="number" min="1" name="quantity" class="qty-form">
+                            <input id="quantity" type="number" min="1" name="quantity" class="qty-form <?php $__errorArgs = ['quantity'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" name="quantity" value="<?php echo e(old('quantity')); ?>" required autocomplete="quantity" autofocus>
+                            <?php $__errorArgs = ['quantity'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                            <span class="invalid-feedback" role="alert">
+                                        <strong><?php echo e($message); ?></strong>
+                                    </span>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                             <input type="hidden" name="pizza_id" value="<?php echo e($pizzas->id); ?>">
                             <div class="form-group row mb-0 custom-button-detail">
                                     <button type="submit"class="btn btn-primary">

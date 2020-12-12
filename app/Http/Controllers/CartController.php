@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Http\Requests\AddToCartRequest;
 use App\Order;
 use App\Orderdetail;
 use Illuminate\Http\Request;
@@ -38,8 +39,9 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddToCartRequest $request)
     {
+
         $this->authorize('modify',Cart::class);
         $input = $request->all();
         $cart = Cart::where('pizza_id',$request->pizza_id)->first();

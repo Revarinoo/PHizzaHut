@@ -37,4 +37,8 @@ Route::get('/', function () {
     Route::get('/transaction','OrderController@transaction')->name('order.transaction');
 
     Auth::routes();
-
+Route::group([
+    'middleware'=>['auth']
+], function (){
+    Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+});

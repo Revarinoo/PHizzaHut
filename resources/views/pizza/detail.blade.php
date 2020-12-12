@@ -17,7 +17,12 @@
                         <form action="{{route('carts.store')}}" style="margin-top: 40px;" method="POST">
                             @csrf
                             <label for="quantity">Quantity : </label>
-                            <input type="number" min="1" name="quantity" class="qty-form">
+                            <input id="quantity" type="number" min="1" name="quantity" class="qty-form @error('quantity') is-invalid @enderror" name="quantity" value="{{ old('quantity') }}" required autocomplete="quantity" autofocus>
+                            @error('quantity')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
                             <input type="hidden" name="pizza_id" value="{{$pizzas->id}}">
                             <div class="form-group row mb-0 custom-button-detail">
                                     <button type="submit"class="btn btn-primary">
