@@ -3,7 +3,7 @@
 @section('content')
     <link rel="stylesheet" href="{{asset('css/history.css')}}">
 
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <?php $count = 1; ?>
         @foreach($listorders as $listorder)
             <?php $count+=1; ?>

@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
     <link rel="stylesheet" href="<?php echo e(asset('css/history.css')); ?>">
 
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <?php $count = 1; ?>
         <?php $__currentLoopData = $listorders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $listorder): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php $count+=1; ?>
