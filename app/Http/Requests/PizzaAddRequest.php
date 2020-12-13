@@ -27,7 +27,7 @@ class PizzaAddRequest extends FormRequest
             'name'=>'required|max:20',
             'description'=>'required|min:20',
             'price'=>'required|min:10000|int',
-            'image'=>'required|mimes:jpg,png,jpeg,svg,bmp,tiff'
+            'image'=>'required|mimes:jpg,png,jpeg,svg'
         ];
     }
 }
