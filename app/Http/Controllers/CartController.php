@@ -67,7 +67,7 @@ class CartController extends Controller
      */
     public function show(User $user)
     {
-        // var_dump($user->cart->first());
+        $this->authorize('modify',Cart::class);
         if(Auth::user() != null && $user->id === Auth::user()->id){
             $carts = $user->cart;
             return view('cart.cart',compact('carts','user'));
