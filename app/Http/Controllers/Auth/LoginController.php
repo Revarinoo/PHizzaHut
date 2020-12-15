@@ -64,8 +64,7 @@ class LoginController extends Controller
         return redirect('/pizza');
     }
 
-    public function username()
-    {
+    public function username(){
         return 'email_address';
     }
 }
