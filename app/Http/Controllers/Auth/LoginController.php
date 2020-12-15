@@ -63,4 +63,8 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('/pizza');
     }
+
+    public function username(){
+        return 'email_address';
+    }
 }
