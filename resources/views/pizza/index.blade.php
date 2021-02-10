@@ -9,7 +9,7 @@
         </div>
                 @can('modify', App\Pizza::class)
                     <button class="btn btn-dark ml-5" type="submit" onclick="location.href='{{route('pizza.create')}}'">Add Pizza</button>
-                @endcan 
+                @endcan
                 @cannot('modify', App\Pizza::class)
                 <form method="get">
                     <div class="input-group mb-3">

@@ -30,14 +30,28 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6d51a6-19f9-46c4-9400-eb62baadce05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Member.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pizza/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizza/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/F8KTmeBLP8x6e13dqnCz69DZXxHRgd3FndBlYLiG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/O09Iy3U6MJlIZGMIh0F6szKKoMoqF6GRavMeMNe8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/XToNr3g3kDZPXePS6EF5fIwTjy160weAjggqBDEZ" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/YzqZWnWd9luQndvnnqnviuY7xW7Odu6ROsc4Vf4R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/tXNOgc58LhgxVYRypO7IWs9AgrnnCQZuhZRMUpAY" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/tXNOgc58LhgxVYRypO7IWs9AgrnnCQZuhZRMUpAY" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/4e60650d9631b0f500adfaef3fdebb6edb51f266.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/4e60650d9631b0f500adfaef3fdebb6edb51f266.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/78736ccf6f9de037dd7f2e99cd275b2ffa88709d.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/78736ccf6f9de037dd7f2e99cd275b2ffa88709d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/86f1117e1d796a2461af94070e233feed6120227.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +184,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pertemuan5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -214,7 +228,35 @@
       <workItem from="1608037661155" duration="2069000" />
       <workItem from="1608102466904" duration="1125000" />
       <workItem from="1608132395395" duration="413000" />
-      <workItem from="1608133031155" duration="479000" />
+      <workItem from="1608133031155" duration="751000" />
+      <workItem from="1608133957558" duration="18000" />
+      <workItem from="1608136230150" duration="3055000" />
+      <workItem from="1608187177078" duration="132000" />
+      <workItem from="1608188045027" duration="258000" />
+      <workItem from="1608644715975" duration="76000" />
+      <workItem from="1608815561079" duration="6820000" />
+      <workItem from="1608878985075" duration="2374000" />
+      <workItem from="1608902356774" duration="2329000" />
+      <workItem from="1608980072464" duration="2008000" />
+      <workItem from="1609081732992" duration="1392000" />
+      <workItem from="1609678400722" duration="1601000" />
+      <workItem from="1609859695077" duration="680000" />
+      <workItem from="1609906616872" duration="29000" />
+      <workItem from="1610470628353" duration="30000" />
+      <workItem from="1610470985841" duration="4415000" />
+      <workItem from="1610524803927" duration="1952000" />
+      <workItem from="1610543752872" duration="5593000" />
+      <workItem from="1610884997870" duration="673000" />
+      <workItem from="1610886267680" duration="2000" />
+      <workItem from="1610890865023" duration="42000" />
+      <workItem from="1611127077421" duration="2255000" />
+      <workItem from="1611162087804" duration="635000" />
+      <workItem from="1611162758664" duration="758000" />
+      <workItem from="1611200839865" duration="1546000" />
+      <workItem from="1611246648029" duration="31000" />
+      <workItem from="1611251552411" duration="1656000" />
+      <workItem from="1611296348973" duration="793000" />
+      <workItem from="1611299563775" duration="4907000" />
     </task>
     <servers />
   </component>
@@ -254,10 +296,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1607757084287" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1607760699818">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1611313839259">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607760699818" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1611313839259" />
     <state x="477" y="264" key="NewPhpFileDialog" timestamp="1606551645404">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -274,9 +316,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1607273022832" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1608132424000">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1608137738274">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608132424000" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608137738274" />
   </component>
 </project>

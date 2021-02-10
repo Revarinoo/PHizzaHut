@@ -25,7 +25,7 @@
                             @enderror
                             <input type="hidden" name="pizza_id" value="{{$pizzas->id}}">
                             <div class="form-group row mb-0 custom-button-detail">
-                                    <button type="submit"class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary">
                                         {{ __('Add to Cart') }}
                                     </button>
                             </div>

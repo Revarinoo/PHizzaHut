@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('content'); ?>
     <link rel="stylesheet" href="<?php echo e(asset('css/index.pizza.css')); ?>">
     <div class="container">
@@ -9,13 +8,13 @@
         </div>
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', App\Pizza::class)): ?>
                     <button class="btn btn-dark ml-5" type="submit" onclick="location.href='<?php echo e(route('pizza.create')); ?>'">Add Pizza</button>
-                <?php endif; ?> 
+                <?php endif; ?>
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->denies('modify', App\Pizza::class)): ?>
                 <form method="get">
                     <div class="input-group mb-3">
                         <h5 class="text-dark ml-5 mt-1">Search Pizza: </h5>
                         <input type="text" class="form-control ml-2" style="border-radius: 0.3rem" placeholder="Pizza's Name" name="pizzaname" aria-label="Pizza's Name" aria-describedby="basic-addon2">
-                        <button class="btn btn-primary ml-3 mr-5" type="submit">Search</button>
+
                     </div>
                 </form>
                 <?php endif; ?>
